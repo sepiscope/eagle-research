@@ -800,7 +800,14 @@
           <div id="signInSent" class="d-none text-center" role="status">
             <div class="display-6 text-success mb-2"><i class="bi bi-envelope-check"></i></div>
             <p class="mb-1">Check your inbox at <strong id="signInSentTo"></strong>.</p>
-            <p class="small text-muted mb-0">Click the link in the email to finish signing in. It may take a minute to arrive; check your spam folder too.</p>
+            <p class="small text-muted">Opening the email on a different device (like your phone)? Type the code from the email here instead of clicking the link. The link only signs in the device you open it on.</p>
+            <form id="signInCodeForm" onsubmit="Auth.verifyCode(event)" novalidate class="text-start">
+              <label for="signInCode" class="form-label small fw-bold">Code from the email</label>
+              <input type="text" class="form-control text-center fs-5" id="signInCode" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]*" maxlength="10" placeholder="123456" aria-describedby="signInCodeError">
+              <div class="small text-danger mt-2" id="signInCodeError" role="alert"></div>
+              <button type="submit" class="btn btn-maroon w-100 mt-2" id="signInCodeSubmit"><i class="bi bi-box-arrow-in-right me-1"></i>Sign in with code</button>
+            </form>
+            <p class="small text-muted mt-3 mb-0">It may take a minute to arrive; check your spam folder too. <button type="button" class="btn btn-link btn-sm p-0 align-baseline" onclick="Auth.openSignIn()">Use a different email</button></p>
           </div>
         </div>
       </div>

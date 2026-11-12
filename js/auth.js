@@ -95,9 +95,35 @@ const Auth = {
           : "Couldn't send the sign-in link. Please try again.";
       return;
     }
+    this.pendingEmail = email;
     document.getElementById("signInSentTo").textContent = email;
+    document.getElementById("signInCode").value = "";
+    document.getElementById("signInCodeError").textContent = "";
     document.getElementById("signInForm").classList.add("d-none");
     document.getElementById("signInSent").classList.remove("d-none");
+    setTimeout(() => document.getElementById("signInCode")?.focus(), 100);
+  },
+
+  // Sign in on THIS device with the code from the email (for when the email is opened on another device)
+  async verifyCode(event) {
+    event.preventDefault();
+    const input = document.getElementById("signInCode");
+    const errEl = document.getElementById("signInCodeError");
+    const btn = document.getElementById("signInCodeSubmit");
+    const token = input.value.replace(/\D/g, "");
+    errEl.textContent = "";
+    if (token.length < 6) { errEl.textContent = "Enter the code from the email."; input.focus(); return; }
+    btn.disabled = true;
+    const { error } = await this.client.auth.verifyOtp({ email: this.pendingEmail, token, type: "email" });
+    btn.disabled = false;
+    if (error) {
+      errEl.textContent = /expired|invalid/i.test(error.message)
+        ? "That code is wrong or has expired. Check it, or use a different email to request a new one."
+        : "Couldn't sign in with that code. Please try again.";
+      input.focus();
+      return;
+    }
+    bootstrap.Modal.getInstance(document.getElementById("signInModal"))?.hide();
   },
 
   async signOut() {
@@ -119,11 +145,11 @@ const Auth = {
     const email = escapeHtml(this.user.email || "");
     slot.innerHTML = `
       <div class="dropdown ms-lg-2">
-        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu for ${email}">
+        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Account menu for ${email}">
           <i class="bi bi-person-check me-1"></i><span class="d-none d-xl-inline">${email}</span><span class="d-xl-none">Account</span>
         </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><span class="dropdown-item-text small text-muted">Signed in as<br><strong>${email}</strong></span></li>
+        <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end account-menu">
+          <li><span class="dropdown-item-text small text-muted">Signed in as<br><strong class="text-break">${email}</strong></span></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="#trackerSection"><i class="bi bi-bookmark-star me-2"></i>My Saved Labs</a></li>
           <li><button class="dropdown-item" type="button" onclick="Auth.signOut()"><i class="bi bi-box-arrow-right me-2"></i>Sign out</button></li>

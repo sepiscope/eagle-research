@@ -142,6 +142,10 @@ a, .btn-link { color: #0a58ca; }
   #deptFilterSelect { min-width: 210px; }
 }
 
+/* ---- Account menu: never wider than the screen; long emails wrap ---- */
+.account-menu { max-width: calc(100vw - 32px); }
+.account-menu .dropdown-item, .account-menu .dropdown-item-text { white-space: normal; }
+
 /* ---- Keep section headings visible below the sticky navbar when jumping via the nav ---- */
 #exploreSection, #orcidSection, #trackerSection, #guideSection { scroll-margin-top: 90px; }
 
