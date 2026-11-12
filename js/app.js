@@ -542,13 +542,16 @@ const PAGE_SIZE = 30;
 
 function renderPagination(total) {
   const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  // Wraps around: Previous on page 1 goes to the last page, Next on the last page goes to page 1
+  const prev = AppState.page <= 1 ? pages : AppState.page - 1;
+  const next = AppState.page >= pages ? 1 : AppState.page + 1;
   const html = pages <= 1 ? "" : `
     <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
-      <button type="button" class="btn btn-outline-maroon btn-sm" onclick="goToPage(${AppState.page - 1})" ${AppState.page <= 1 ? "disabled" : ""}>
+      <button type="button" class="btn btn-outline-maroon btn-sm page-btn" onclick="goToPage(${prev})" aria-label="Previous page (page ${prev})">
         <i class="bi bi-chevron-left me-1"></i>Previous
       </button>
       <span class="small text-muted px-2" aria-live="polite">Page <strong>${AppState.page}</strong> of ${pages}</span>
-      <button type="button" class="btn btn-maroon btn-sm" onclick="goToPage(${AppState.page + 1})" ${AppState.page >= pages ? "disabled" : ""}>
+      <button type="button" class="btn btn-outline-maroon btn-sm page-btn" onclick="goToPage(${next})" aria-label="Next page (page ${next})">
         Next<i class="bi bi-chevron-right ms-1"></i>
       </button>
     </div>`;

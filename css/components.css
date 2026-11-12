@@ -152,6 +152,9 @@ body.view-saved #exploreSection > :not(#trackerSection) { display: none !importa
 body:not(.view-saved) #trackerSection { display: none !important; }
 body.view-saved #exploreSection { min-height: 60vh; }
 
+/* ---- Previous / Next: identical buttons, same width ---- */
+.page-btn { min-width: 7.5rem; }
+
 /* ---- Keep section headings visible below the sticky navbar when jumping via the nav ---- */
 #exploreSection, #orcidSection, #trackerSection, #guideSection { scroll-margin-top: 90px; }
 
