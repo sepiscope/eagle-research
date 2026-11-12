@@ -52,7 +52,7 @@ function setupNavHighlight() {
   }));
 
   const onScroll = () => {
-    if (Date.now() < clickLockUntil) return;
+    if (Date.now() < clickLockUntil || document.body.classList.contains("view-saved")) return;
     const navH = (document.querySelector(".bc-navbar")?.offsetHeight || 0) + 24;
     let current = sections[0];
     for (const s of sections) { if (s.el.getBoundingClientRect().top - navH <= 0) current = s; }
@@ -61,7 +61,30 @@ function setupNavHighlight() {
     if (!current.link.classList.contains("active")) setActiveNav(current.link);
   };
   window.addEventListener("scroll", onScroll, { passive: true });
+
+  // "My Saved Labs" is a separate page at #saved; every other link returns to the main page
+  window.addEventListener("hashchange", () => showView(true));
+  showView(false);
   onScroll();
+}
+
+function showView(fromNavigation) {
+  const saved = location.hash === "#saved";
+  const wasSaved = document.body.classList.contains("view-saved");
+  showView.baseTitle = showView.baseTitle || document.title;
+  document.body.classList.toggle("view-saved", saved);
+  document.title = saved ? "My Saved Labs | " + showView.baseTitle : showView.baseTitle;
+  if (saved) {
+    setActiveNav(document.getElementById("navTracker"));
+    window.scrollTo(0, 0);
+  } else if (wasSaved || fromNavigation) {
+    // the target section was hidden when the browser tried to jump to it, so jump now
+    let target = null;
+    try { target = /^#[\w-]+$/.test(location.hash) ? document.querySelector(location.hash) : null; } catch (e) { /* not a section link */ }
+    if (target) target.scrollIntoView();
+    else if (wasSaved) window.scrollTo(0, 0);
+    window.dispatchEvent(new Event("scroll"));   // re-sync the highlighted nav tab
+  }
 }
 
 // Setup DOM event listeners
@@ -654,8 +677,8 @@ function renderFacultyList(keepPage) {
                         id="save-btn-${prof.id}"
                         onclick="ApplicationTracker.toggleSave('${prof.id}')"
                         aria-pressed="${isSaved}" aria-label="Save ${prof.name.replace(/"/g, '&quot;')} to your tracker"
-                        title="${isSaved ? 'Remove from Tracker' : 'Save to Research Tracker'}">
-                  <i class="bi ${isSaved ? 'bi-star-fill text-warning' : 'bi-star text-muted'} fs-5"></i>
+                        title="${isSaved ? 'Remove from My Saved Labs' : 'Save to My Saved Labs'}">
+                  <i class="bi ${isSaved ? 'bi-bookmark-fill text-maroon' : 'bi-bookmark text-muted'} fs-5"></i>
                 </button>
               </div>
 
@@ -824,8 +847,8 @@ function updateSaveButtons(labId, isSaved) {
   const btn = document.getElementById(`save-btn-${labId}`);
   if (!btn) return;
   btn.className = "btn btn-sm p-0 border-0 save-btn";
-  btn.innerHTML = `<i class="bi ${isSaved ? "bi-star-fill text-warning" : "bi-star text-muted"} fs-5"></i>`;
-  btn.title = isSaved ? "Remove from Tracker" : "Save to Research Tracker";
+  btn.innerHTML = `<i class="bi ${isSaved ? "bi-bookmark-fill text-maroon" : "bi-bookmark text-muted"} fs-5"></i>`;
+  btn.title = isSaved ? "Remove from My Saved Labs" : "Save to My Saved Labs";
   btn.setAttribute("aria-pressed", String(isSaved));
 }
 
@@ -835,6 +858,32 @@ function refreshAllSaveButtons() {
     const labId = btn.id.replace("save-btn-", "");
     updateSaveButtons(labId, ApplicationTracker.isSaved(labId));
   });
+}
+
+// Detail pop-up: the posted position details, with every unposted item listed once in a single note
+function postedDetailsHtml(prof) {
+  const listed = v => v && !/not listed/i.test(v);
+  const posted = [], missing = [];
+  const add = (label, html, missingLabel) => html ? posted.push({ label, html }) : missing.push(missingLabel);
+
+  add("Time commitment", listed(prof.hoursPerWeek) ? `<strong class="text-dark">${escapeHtml(prof.hoursPerWeek)}</strong>` : "", "weekly hours");
+  add("Minimum duration", listed(prof.minimumCommitment) ? `<strong class="text-dark">${escapeHtml(prof.minimumCommitment)}</strong>` : "", "minimum duration");
+  add("Eligible class years", (prof.studentLevel || []).length ? `<strong class="text-dark">${escapeHtml(prof.studentLevel.join(", "))}</strong>` : "", "eligible class years");
+  add("Pay / credit", (prof.pay && prof.pay.paid) ? `<span class="badge bg-gold text-dark me-1">${payLabel(prof.pay)}</span> <span class="text-muted">"${escapeHtml(prof.pay.evidence)}"</span>` : "", "pay or credit");
+  add("Required coursework & skills", (prof.requiredSkills || []).map(s => `<span class="badge bg-light text-dark border me-1 mb-1">${escapeHtml(s)}</span>`).join(""), "required skills");
+  add("Helpful skills", (prof.preferredSkills || []).map(s => `<span class="badge bg-secondary-subtle text-dark me-1 mb-1">${escapeHtml(s)}</span>`).join(""), "helpful skills");
+
+  const postedHtml = posted.length ? `
+    <div class="row g-3 mb-3 bg-light p-3 rounded small mx-0">
+      ${posted.map(p => `<div class="col-md-6"><span class="text-muted d-block">${p.label}</span>${p.html}</div>`).join("")}
+    </div>` : "";
+  const list = missing.length > 1 ? missing.slice(0, -1).join(", ") + " and " + missing[missing.length - 1] : missing[0];
+  const missingHtml = missing.length ? `
+    <div class="small text-muted mb-4 p-3 border rounded">
+      <i class="bi bi-info-circle me-1"></i><strong>Not posted by the professor:</strong> ${list}. Ask about these when you email.
+      ${missing.includes("pay or credit") ? `BC's Undergraduate Research Fellowship can fund paid positions.` : ""}
+    </div>` : "";
+  return postedHtml + missingHtml;
 }
 
 // Full Professor Detail Modal View
@@ -877,31 +926,20 @@ function viewProfessorDetail(facultyId) {
 
   document.getElementById("detailResearchSummary").textContent = prof.researchSummary;
 
-  // Projects
-  const projContainer = document.getElementById("detailProjectsList");
-  projContainer.innerHTML = (prof.currentProjects || []).length ? prof.currentProjects.map(p => `
+  // Projects: hidden entirely when none are posted (the research summary above covers it)
+  const projects = prof.currentProjects || [];
+  document.getElementById("detailProjectsBlock").classList.toggle("d-none", !projects.length);
+  document.getElementById("detailProjectsList").innerHTML = projects.map(p => `
     <li class="mb-2"><i class="bi bi-check-circle text-maroon me-2"></i>${p}</li>
-  `).join("") : `<li class="text-muted small">Not listed. See the research summary and the professor's website.</li>`;
+  `).join("");
 
-  // Requirements & Compensation
-  document.getElementById("detailHours").textContent = prof.hoursPerWeek;
-  document.getElementById("detailCommitment").textContent = prof.minimumCommitment;
-  document.getElementById("detailEligibility").textContent = (prof.studentLevel || []).length ? prof.studentLevel.join(", ") : "Not listed";
-  
-  const compContainer = document.getElementById("detailCompensation");
-  compContainer.innerHTML = (prof.pay && prof.pay.paid)
-    ? `<span class="badge bg-gold text-dark me-1">${payLabel(prof.pay)}</span> <span class="small text-muted">"${prof.pay.evidence}"</span>`
-    : `<span class="small text-muted">Not listed. Ask the professor (BC's Undergraduate Research Fellowship can fund paid positions).</span>`;
-
-  const reqSkillsContainer = document.getElementById("detailRequiredSkills");
-  reqSkillsContainer.innerHTML = (prof.requiredSkills || []).length ? prof.requiredSkills.map(s => `<span class="badge bg-light text-dark border me-1 mb-1">${s}</span>`).join("") : `<span class="small text-muted">Not listed</span>`;
-
-  const prefSkillsContainer = document.getElementById("detailPreferredSkills");
-  prefSkillsContainer.innerHTML = (prof.preferredSkills || []).length ? prof.preferredSkills.map(s => `<span class="badge bg-secondary-subtle text-dark me-1 mb-1">${s}</span>`).join("") : `<span class="small text-muted">Not listed</span>`;
+  // Position details: show only what's actually posted, and name everything missing once
+  document.getElementById("detailPostedInfo").innerHTML = postedDetailsHtml(prof);
 
   if (signedIn) document.getElementById("detailApplyProcess").textContent = prof.applicationInstructions || prof.applicationProcess || "Not listed";
   else document.getElementById("detailApplyProcess").innerHTML = signInPromptHtml("how to apply to this lab");
-  document.getElementById("detailSamplePaper").textContent = prof.samplePaperTitle ? `"${prof.samplePaperTitle}"` : "Not listed";
+  document.getElementById("detailSamplePaper").textContent = prof.samplePaperTitle ? `"${prof.samplePaperTitle}"` : "";
+  document.getElementById("detailSamplePaperBlock").classList.toggle("d-none", !prof.samplePaperTitle);
 
   // ORCID Detail section
   const orcidDetailBox = document.getElementById("detailOrcidInfo");

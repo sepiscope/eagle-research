@@ -55,7 +55,7 @@
             <a class="nav-link text-white-50" href="#orcidSection" id="navOrcid">ORCID Verification</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white-50" href="#trackerSection" id="navTracker">
+            <a class="nav-link text-white-50" href="#saved" id="navTracker">
               My Saved Labs <span class="badge bg-gold text-dark rounded-pill ms-1" id="savedTrackerCount">0</span>
             </a>
           </li>
@@ -337,13 +337,15 @@
     </section>
 
     <!-- ==================== MY SAVED LABS TRACKER SECTION ==================== -->
-    <section class="mt-5 pt-4 border-top" id="trackerSection">
-      <div class="d-flex justify-content-between align-items-center mb-3">
+    <!-- Shown as its own page (#saved); hidden on the main page. See showView() in app.js -->
+    <section class="pt-2" id="trackerSection">
+      <a href="#exploreSection" class="small text-decoration-none d-inline-block mb-3"><i class="bi bi-arrow-left me-1"></i>Back to opportunities</a>
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
         <div>
           <h2 class="h3 fw-bold text-maroon mb-0">
-            <i class="bi bi-bookmark-star-fill text-gold me-2"></i>My Research Application Tracker
+            <i class="bi bi-bookmark-fill text-gold me-2"></i>My Saved Labs
           </h2>
-          <small class="text-muted">Save labs, star your favorites, track where you've applied, and keep private notes.</small>
+          <small class="text-muted">Track where you've applied and keep private notes on each lab.</small>
         </div>
         <button class="btn btn-outline-secondary btn-sm" onclick="ApplicationTracker.exportJSON()">
           <i class="bi bi-download me-1"></i> Export Tracker (JSON)
@@ -361,8 +363,8 @@
       <!-- Empty Tracker State -->
       <div class="text-center py-5 bg-white rounded border d-none" id="trackerEmptyState">
         <div class="display-6 text-muted mb-2"><i class="bi bi-bookmark-plus"></i></div>
-        <h3 class="h5 text-dark">Your Research Tracker is Empty</h3>
-        <p class="text-muted small mb-3">Click the star on any professor's card above to save the lab, then track your status and keep personal notes here.</p>
+        <h3 class="h5 text-dark">No saved labs yet</h3>
+        <p class="text-muted small mb-3">Tap the <i class="bi bi-bookmark"></i> on any professor's card to save the lab, then track your status and keep personal notes here.</p>
         <a href="#exploreSection" class="btn btn-sm btn-maroon">Browse Opportunities</a>
       </div>
     </section>
@@ -486,7 +488,7 @@
           </div>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body p-4 custom-scrollbar">
+        <div class="modal-body p-4 custom-scrollbar" tabindex="0" aria-label="Professor details">
           
           <!-- ORCID Status Box in Detail Modal -->
           <div id="detailOrcidInfo"></div>
@@ -499,41 +501,16 @@
           </div>
 
           <!-- Key Projects -->
-          <div class="mb-4">
+          <div class="mb-4" id="detailProjectsBlock">
             <h3 class="h6 fw-bold text-maroon text-uppercase small tracking-wide">Current Active Projects</h3>
             <ul class="list-unstyled small ps-1" id="detailProjectsList"></ul>
           </div>
 
-          <!-- Prerequisites & Commitment Grid -->
-          <div class="row g-3 mb-4 bg-light p-3 rounded">
-            <div class="col-md-4">
-              <span class="text-muted small d-block">Time Commitment:</span>
-              <strong class="text-dark small" id="detailHours">10 hrs/week</strong>
-            </div>
-            <div class="col-md-4">
-              <span class="text-muted small d-block">Minimum Duration:</span>
-              <strong class="text-dark small" id="detailCommitment">2 semesters</strong>
-            </div>
-            <div class="col-md-4">
-              <span class="text-muted small d-block">Eligible Class Years:</span>
-              <strong class="text-dark small" id="detailEligibility">Sophomore, Junior</strong>
-            </div>
-            <div class="col-12 border-top pt-2">
-              <span class="text-muted small d-block mb-1">Compensation / Credit:</span>
-              <div id="detailCompensation"></div>
-            </div>
-          </div>
-
-          <!-- Skills Needed -->
-          <div class="mb-4">
-            <h3 class="h6 fw-bold text-dark small mb-2">Required Coursework & Skills:</h3>
-            <div class="mb-2" id="detailRequiredSkills"></div>
-            <h3 class="h6 fw-bold text-dark small mb-2">Preferred / Helpful Skills:</h3>
-            <div id="detailPreferredSkills"></div>
-          </div>
+          <!-- Posted position details: only what the professor actually lists; everything missing is named once -->
+          <div id="detailPostedInfo"></div>
 
           <!-- Representative Publication -->
-          <div class="mb-4 p-3 border-start border-4 border-maroon bg-light rounded-end">
+          <div class="mb-4 p-3 border-start border-4 border-maroon bg-light rounded-end" id="detailSamplePaperBlock">
             <span class="text-muted small fw-bold text-uppercase d-block mb-1">
               <i class="bi bi-file-earmark-text text-maroon me-1"></i>Representative Publication from ORCID:
             </span>

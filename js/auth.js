@@ -151,7 +151,7 @@ const Auth = {
         <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end account-menu">
           <li><span class="dropdown-item-text small text-muted">Signed in as<br><strong class="text-break">${email}</strong></span></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#trackerSection"><i class="bi bi-bookmark-star me-2"></i>My Saved Labs</a></li>
+          <li><a class="dropdown-item" href="#saved"><i class="bi bi-bookmark-star me-2"></i>My Saved Labs</a></li>
           <li><button class="dropdown-item" type="button" onclick="Auth.signOut()"><i class="bi bi-box-arrow-right me-2"></i>Sign out</button></li>
         </ul>
       </div>`;

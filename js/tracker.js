@@ -64,7 +64,7 @@ const ApplicationTracker = {
   data: [],
   store: LocalTrackerStore,
   mode: "guest",          // "guest" | "account"
-  view: "all",            // "all" | "favorites" | "applied"
+  view: "all",            // "all" | "applied"
 
   async init() {
     await LocalTrackerStore.clear();   // remove anything an older version of the site saved in this browser
@@ -107,11 +107,6 @@ const ApplicationTracker = {
     return this.data.some(item => item.labId === labId);
   },
 
-  isFavorite(labId) {
-    const i = this.data.find(d => d.labId === labId);
-    return !!(i && i.favorite);
-  },
-
   newItem(labId, status = "considering", notes = "") {
     return { labId, status, favorite: false, addedAt: new Date().toISOString().split("T")[0], notes };
   },
@@ -151,14 +146,6 @@ const ApplicationTracker = {
     }
     this.render();
     updateSaveButtons(labId, true);
-    await this.persist(item);
-  },
-
-  async toggleFavorite(labId) {
-    const item = this.data.find(d => d.labId === labId);
-    if (!item) return;
-    item.favorite = !item.favorite;
-    this.render();
     await this.persist(item);
   },
 
@@ -221,7 +208,7 @@ const ApplicationTracker = {
         <div class="text-center py-5 bg-white rounded border">
           <div class="display-6 text-muted mb-2"><i class="bi bi-lock"></i></div>
           <h3 class="h5 text-dark">Sign in to use your Research Tracker</h3>
-          <p class="text-muted small mb-3">Save labs, star favorites, track applications, and keep private notes. Available to Boston College students with a @bc.edu email.</p>
+          <p class="text-muted small mb-3">Save labs, track applications, and keep private notes. Available to Boston College students with a @bc.edu email.</p>
           ${typeof Auth !== "undefined" && Auth.enabled
             ? `<button type="button" class="btn btn-sm btn-maroon" onclick="Auth.openSignIn()"><i class="bi bi-person-circle me-1"></i>Sign in with your BC email</button>`
             : `<span class="small text-muted">Sign-in isn't switched on yet.</span>`}
@@ -233,22 +220,19 @@ const ApplicationTracker = {
 
     const counts = {
       all: this.data.length,
-      favorites: this.data.filter(i => i.favorite).length,
       applied: this.data.filter(i => ["applied", "interview", "joined"].includes(i.status)).length
     };
     if (viewBar) {
       const btn = (v, label, icon) => `<button type="button" class="btn btn-sm ${this.view === v ? "btn-maroon" : "btn-outline-maroon"}" onclick="ApplicationTracker.setView('${v}')" aria-pressed="${this.view === v}"><i class="bi ${icon} me-1"></i>${label} (${counts[v]})</button>`;
-      viewBar.innerHTML = this.data.length ? btn("all", "All saved", "bi-bookmark") + btn("favorites", "Favorites", "bi-star-fill") + btn("applied", "Applied", "bi-send-check") : "";
+      viewBar.innerHTML = this.data.length ? btn("all", "All saved", "bi-bookmark") + btn("applied", "Applied", "bi-send-check") : "";
     }
 
     let items = this.data;
-    if (this.view === "favorites") items = items.filter(i => i.favorite);
     if (this.view === "applied") items = items.filter(i => ["applied", "interview", "joined"].includes(i.status));
-    items = [...items].sort((a, b) => (b.favorite ? 1 : 0) - (a.favorite ? 1 : 0));
 
     if (items.length === 0) {
       container.innerHTML = this.data.length
-        ? `<p class="text-muted small py-3 mb-0">Nothing here yet. ${this.view === "favorites" ? "Tap the star on a saved lab to favorite it." : "Set a lab's status to Applied once you've applied."}</p>`
+        ? `<p class="text-muted small py-3 mb-0">Nothing here yet. Set a lab's status to Applied once you've applied.</p>`
         : "";
       if (emptyState) emptyState.classList.toggle("d-none", this.data.length > 0);
       return;
@@ -262,15 +246,10 @@ const ApplicationTracker = {
       const options = Object.entries(TRACKER_STATUSES).map(([v, s]) => `<option value="${v}" ${item.status === v ? "selected" : ""}>${s.text}</option>`).join("");
 
       html += `
-        <div class="card mb-3 shadow-sm tracker-card ${item.favorite ? "border-warning" : "border-primary-subtle"}">
+        <div class="card mb-3 shadow-sm tracker-card border-primary-subtle">
           <div class="card-body">
             <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
               <div class="d-flex align-items-start gap-2">
-                <button type="button" class="btn btn-sm p-0 border-0" onclick="ApplicationTracker.toggleFavorite('${prof.id}')"
-                        aria-pressed="${item.favorite}" aria-label="${item.favorite ? "Remove from favorites" : "Add to favorites"}: ${escapeHtml(prof.name)}"
-                        title="${item.favorite ? "Favorite" : "Mark as favorite"}">
-                  <i class="bi ${item.favorite ? "bi-star-fill text-warning" : "bi-star text-muted"} fs-5"></i>
-                </button>
                 <div>
                   <h3 class="h5 mb-1 text-maroon font-weight-bold">${escapeHtml(prof.name)}</h3>
                   <div class="text-muted small"><strong>${escapeHtml(prof.department)}</strong> · ${escapeHtml(prof.labName)}</div>
@@ -288,7 +267,7 @@ const ApplicationTracker = {
             </div>
 
             <div class="row g-2 small text-muted my-2 bg-light p-2 rounded">
-              <div class="col-md-4"><i class="bi bi-geo-alt me-1"></i> ${escapeHtml(prof.building)}${prof.room ? ", " + escapeHtml(prof.room) : ""}</div>
+              <div class="col-md-4"><i class="bi bi-geo-alt me-1"></i> ${prof.building ? escapeHtml(prof.building) + (prof.room ? ", " + escapeHtml(prof.room) : "") : "Office not listed"}</div>
               <div class="col-md-4"><i class="bi bi-envelope me-1"></i> ${prof.email ? `<a href="mailto:${escapeHtml(prof.email)}" class="text-decoration-none">${escapeHtml(prof.email)}</a>` : "Email not listed"}</div>
               <div class="col-md-4"><i class="bi bi-clock me-1"></i> Added: ${escapeHtml(item.addedAt)}</div>
             </div>
