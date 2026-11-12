@@ -4,14 +4,14 @@
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 ### 1. ORCID Registry Cross-Referencing & Emailing Guardrail (NEW)
 To ensure students do not waste time cold emailing professors who have stopped conducting active laboratory research (e.g., transitioned entirely into university administration, teaching-only appointments, or retirement):
 * **Cross-Referenced with Global ORCID:** Every faculty member is linked to their persistent 16-digit ORCID identifier (`https://orcid.org/0000-...`).
 * **Active vs. Inactive Research Detection:**
-  * 🟢 **ORCID Active:** Professors with peer-reviewed publications and grant activities in 2025–2026 are verified as active researchers.
-  * 🚫 **ORCID Inactive / Ceased:** If ORCID records show zero publications or active grants in 3+ years, the professor is flagged as **Research Inactive**.
+  * **ORCID Active:** Professors with peer-reviewed publications and grant activities in 2025–2026 are verified as active researchers.
+  * **ORCID Inactive / Ceased:** If ORCID records show zero publications or active grants in 3+ years, the professor is flagged as **Research Inactive**.
 * **Cold Email Safeguard:** For inactive professors, the **Draft Email button is safely blocked and locked** (`Emailing Blocked (Inactive)`), displaying a warning modal that explains the professor's transition away from active lab research.
 * **ORCID Inspector:** Click any ORCID badge to view the professor's verified publication count, most recent paper citation, journal name, and direct link to their ORCID profile.
 
@@ -77,7 +77,7 @@ Indexed across major Boston College academic departments:
 
 ---
 
-## 📂 Project Architecture
+## Project Architecture
 
 ```
 eagle-research/
@@ -105,7 +105,7 @@ eagle-research/
 
 ---
 
-## 🚀 Running It
+## Running It
 
 **Live site:** https://sepiscope.github.io/eagle-research/
 
