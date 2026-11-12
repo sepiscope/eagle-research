@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EagleResearch · Boston College Research Opportunities Portal</title>
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Top Semester & Verification Status Bar -->
+  <div role="region" aria-label="Term and verification status" class="semester-status-bar py-1 px-3 d-flex flex-wrap justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-2">
+      <span class="badge bg-gold text-dark px-2 py-1 fw-bold">ACADEMIC TERM: FALL 2026</span>
+      <span class="d-none d-md-inline text-secondary">|</span>
+      <span class="d-none d-md-inline text-light small">
+        <i class="bi bi-patch-check text-success me-1"></i> ORCID Cross-Referenced: Inactive researchers blocked
+      </span>
+    </div>
+    <div class="d-flex align-items-center gap-3 small">
+      <span class="text-light-emphasis"><i class="bi bi-geo-alt-fill text-gold me-1"></i>Chestnut Hill, MA</span>
+      <span class="text-light-emphasis"><i class="bi bi-mortarboard-fill text-gold me-1"></i>Boston College</span>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar (Clean text tabs without emojis) -->
+  <nav class="navbar navbar-expand-lg bg-maroon navbar-dark bc-navbar sticky-top shadow">
+    <div class="container-fluid px-lg-4">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <div class="bc-emblem">BC</div>
+        <div>
+          <span class="fw-bold tracking-tight text-white fs-5 d-block lh-1">EagleResearch</span>
+          <small class="text-gold-light fw-normal" style="font-size: 0.75rem;">Boston College Research Portal</small>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item">
+            <a class="nav-link active" href="#exploreSection" id="navExplore">Explore Opportunities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="#orcidSection" id="navOrcid">ORCID Verification</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="#trackerSection" id="navTracker">
+              My Saved Labs <span class="badge bg-gold text-dark rounded-pill ms-1" id="savedTrackerCount">0</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="#guideSection" id="navGuide">Student Funding Guide</a>
+          </li>
+        </ul>
+        <div id="accountNavSlot" class="d-flex align-items-center mb-2 mb-lg-0"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-white border-bottom py-4 py-md-5 mb-4 shadow-sm">
+    <div class="container-fluid px-lg-4">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="display-6 fw-bold text-maroon mb-2">
+            Find Active Research Opportunities with BC Faculty
+          </h1>
+          <p class="lead text-secondary fs-6 mb-3">
+            Search undergraduate research openings across all Boston College schools and colleges — MCAS (Natural Sciences, Social Sciences & Humanities), Theology & Ministry, Nursing, Education, and Management. 
+            Cross-referenced with official BC directories, department pages, lab websites, and <strong>ORCID / OpenAlex publication records</strong>.
+          </p>
+          <div class="d-flex flex-wrap gap-2 align-items-center">
+            <div class="alert alert-success py-2 px-3 mb-0 small d-inline-flex align-items-center gap-2 border-success shadow-sm">
+              <i class="bi bi-patch-check-fill fs-5 text-success"></i>
+              <div>
+                <strong>Research Activity Check:</strong> Every professor listed has publications from 2024-2026 (verified on OpenAlex, ORCID, or their own pages). Professors who have stopped active research are flagged, and outreach to them is blocked.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Stats Cards Column -->
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="row g-2">
+            <div class="col-6">
+              <div class="stat-card border-success-subtle h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-success small fw-semibold">Research Active</span>
+                  <div class="stat-icon bg-success-subtle text-success"><i class="bi bi-patch-check-fill"></i></div>
+                </div>
+                <div class="h3 fw-bold mb-0 text-success" id="statOrcidActiveCount">--</div>
+                <small class="text-muted">Professors publishing in 2024-2026</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card border-warning-subtle h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-warning-emphasis small fw-semibold">Have Taken Undergrads</span>
+                  <div class="stat-icon bg-warning-subtle text-warning-emphasis"><i class="bi bi-people-fill"></i></div>
+                </div>
+                <div class="h3 fw-bold mb-0 text-warning-emphasis" id="statMentoredCount">--</div>
+                <small class="text-muted">Labs with undergrad evidence</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card border-primary-subtle h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-primary-emphasis small fw-semibold">Verified Paid Positions</span>
+                  <div class="stat-icon bg-primary-subtle text-primary-emphasis"><i class="bi bi-cash-coin"></i></div>
+                </div>
+                <div class="h3 fw-bold mb-0 text-primary-emphasis" id="statPaidCount">--</div>
+                <small class="text-muted">Confirmed by lab or department</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-muted small fw-semibold">Departments</span>
+                  <div class="stat-icon bg-light text-gold"><i class="bi bi-diagram-3"></i></div>
+                </div>
+                <div class="h3 fw-bold mb-0 text-dark" id="statDeptCount">--</div>
+                <small class="text-muted">Across 7 schools</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Application Content Area -->
+  <main class="container-fluid px-lg-4 mb-5" id="exploreSection">
+    
+    <!-- Breadcrumb-Style School → Department Filter Row -->
+    <div class="d-flex flex-wrap align-items-center gap-2 mt-3 mb-3" id="schoolDeptBreadcrumb">
+      <i class="bi bi-funnel-fill text-maroon small"></i>
+      <span class="text-muted small fw-semibold text-uppercase">Browse by:</span>
+
+      <!-- School Dropdown -->
+      <div class="d-flex align-items-center gap-1">
+        <label class="text-muted small mb-0" for="schoolFilterSelect">School</label>
+        <select class="form-select form-select-sm breadcrumb-select" id="schoolFilterSelect" aria-label="Filter by school" style="width: auto;"
+                onchange="selectSchoolFromDropdown(this.value)">
+          <!-- Populated by app.js -->
+        </select>
+      </div>
+
+      <!-- Separator arrow — only shown when a specific school is selected -->
+      <span class="text-muted small breadcrumb-arrow d-none" id="breadcrumbArrow">
+        <i class="bi bi-chevron-right"></i>
+      </span>
+
+      <!-- Department Dropdown — hidden until a school is picked -->
+      <div class="d-flex align-items-center gap-1 d-none" id="breadcrumbDeptWrapper">
+        <label class="text-muted small mb-0" for="deptFilterSelect">Department</label>
+        <select class="form-select form-select-sm breadcrumb-select" id="deptFilterSelect" aria-label="Filter by department" style="width: auto;"
+                onchange="selectDeptFromDropdown(this.value)">
+          <!-- Populated by app.js -->
+        </select>
+      </div>
+
+      <!-- Active breadcrumb crumb trail display -->
+      <div class="ms-auto" id="breadcrumbTrail"></div>
+    </div>
+
+    <!-- Search, Filter & Controls Panel -->
+    <div class="card shadow-sm border-0 mb-4 bg-white">
+      <div class="card-body p-3 p-md-4">
+        <div class="row g-3 align-items-center">
+          
+          <!-- Full-Text Search Input -->
+          <div class="col-12 col-md-4">
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0 text-muted">
+                <i class="bi bi-search"></i>
+              </span>
+              <input type="text" class="form-control border-start-0 ps-0" id="searchInput" 
+                     placeholder="Search professor, keyword, ORCID ID, lab, or skills...">
+              <button class="btn btn-outline-secondary" type="button" id="clearSearchBtn" title="Clear search">
+                <i class="bi bi-x"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Status Filter Dropdown -->
+          <div class="col-6 col-md-2">
+            <select class="form-select form-select-sm" id="statusFilterSelect" aria-label="Filter by opening status">
+              <option value="all">Status: All</option>
+              <option value="recruiting">🟢 Actively Recruiting</option>
+              <option value="inquire">🔵 No Posted Openings (email to ask)</option>
+              <option value="full">⚪ Lab Full</option>
+            </select>
+          </div>
+
+          <!-- ORCID Filter Dropdown -->
+          <div class="col-6 col-md-2">
+            <select class="form-select form-select-sm" id="orcidFilterSelect" aria-label="Filter by research activity">
+              <option value="all">ORCID: All</option>
+              <option value="active">🟢 Active on ORCID (2025-2026)</option>
+              <option value="inactive">🚫 Inactive / Ceased (Blocked)</option>
+            </select>
+          </div>
+
+          <!-- Compensation Filter Dropdown -->
+          <div class="col-6 col-md-2">
+            <select class="form-select form-select-sm" id="compFilterSelect" aria-label="Filter by pay">
+              <option value="all">Pay: All</option>
+              <option value="paid">💵 Paid (verified)</option>
+            </select>
+          </div>
+
+          <!-- Reset Button -->
+          <div class="col-12 col-md-1 text-end">
+            <button class="btn btn-outline-secondary btn-sm w-100" id="resetFiltersBtn" title="Reset all filters">
+              <i class="bi bi-arrow-counterclockwise"></i> Reset
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Quick Filter Pills Row -->
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3 pt-3 border-top">
+          <div class="d-flex flex-wrap gap-2 align-items-center">
+            <span class="text-muted small fw-semibold me-1">Quick Filters:</span>
+            <button class="quick-filter-btn active" id="qfAll" onclick="applyQuickFilter('all')">
+              All Listings
+            </button>
+            <button class="quick-filter-btn text-success fw-bold border-success-subtle" id="qfOrcidActive" onclick="applyQuickFilter('orcidActive')">
+              <i class="bi bi-patch-check-fill text-success me-1"></i> ORCID Active Only
+            </button>
+            <button class="quick-filter-btn text-success border-success-subtle" id="qfRecruiting" onclick="applyQuickFilter('recruiting')">
+              <i class="bi bi-check-circle-fill me-1"></i> Actively Recruiting
+            </button>
+            <button class="quick-filter-btn text-warning-emphasis border-warning-subtle" id="qfMentored" onclick="applyQuickFilter('mentored')"
+                    title="Labs with a current posting, or evidence they have taken undergraduates before">
+              <i class="bi bi-people-fill me-1"></i> Has Taken Undergrads
+            </button>
+            <button class="quick-filter-btn text-primary border-primary-subtle" id="qfInquire" onclick="applyQuickFilter('inquire')">
+              <i class="bi bi-envelope-open me-1"></i> No Posted Openings
+            </button>
+            <button class="quick-filter-btn" id="qfPaid" onclick="applyQuickFilter('paid')">
+              <i class="bi bi-cash-coin me-1"></i> Paid Positions
+            </button>
+          </div>
+
+          <!-- Sort Selector -->
+          <div class="d-flex align-items-center gap-2">
+            <span class="text-muted small">Sort by:</span>
+            <select class="form-select form-select-sm" id="sortSelect" aria-label="Sort results" style="width: auto;">
+              <option value="verified">Recently Verified</option>
+              <option value="orcidWorks">Most ORCID Publications</option>
+              <option value="name">Professor Name (A-Z)</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Department note (shown when a department is selected) -->
+    <div id="deptNoteBanner"></div>
+
+    <!-- Results Header -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <span class="fw-semibold text-secondary" id="resultCount">Loading opportunities...</span>
+      <span class="small text-muted">
+        <i class="bi bi-clock-history me-1"></i> Verified November 2026 · BC directories, ORCID &amp; OpenAlex
+      </span>
+    </div>
+
+    <!-- Pagination (top) -->
+    <nav id="paginationTop" class="mb-3" aria-label="Results pages, top"></nav>
+
+    <!-- Faculty Cards Grid -->
+    <div class="row align-items-start" id="facultyListContainer">
+      <!-- Rendered dynamically via app.js -->
+    </div>
+
+    <!-- Pagination (bottom) -->
+    <nav id="paginationBottom" class="mt-2 mb-3" aria-label="Results pages, bottom"></nav>
+
+    <!-- Empty State (No search results) -->
+    <div class="text-center py-5 d-none" id="noResultsState">
+      <div class="display-6 text-muted mb-3"><i class="bi bi-search"></i></div>
+      <h4 class="text-dark">No matching research opportunities found</h4>
+      <p class="text-muted">Try adjusting your filters, clearing your search query, or selecting another department.</p>
+      <button class="btn btn-maroon btn-sm" onclick="resetAllFilters()">Reset All Filters</button>
+    </div>
+
+    <!-- ==================== ORCID CROSS-REFERENCING HUB SECTION (STREAMLINED) ==================== -->
+    <section class="mt-4 pt-3 border-top" id="orcidSection">
+      <div class="bg-white p-3 p-md-4 rounded shadow-sm border border-success-subtle">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-patch-check-fill text-success fs-5"></i>
+            <h2 class="h5 fw-bold mb-0 text-maroon">Research Activity Verification</h2>
+          </div>
+          <button class="btn btn-sm btn-outline-success fw-semibold" onclick="applyQuickFilter('orcidActive'); document.getElementById('exploreSection').scrollIntoView({behavior: 'smooth'});">
+            <i class="bi bi-patch-check-fill me-1"></i> Filter: Active ORCID Faculty Only
+          </button>
+        </div>
+        <p class="text-secondary small mb-3">
+          At large research institutions, faculty pages often remain unchanged even when a professor shifts to administrative roles, non-research teaching, or retires. EagleResearch cross-references every professor against their global ORCID record to confirm active peer-reviewed publications and federally funded grants.
+        </p>
+        <div class="row g-2">
+          <div class="col-md-4">
+            <div class="p-2 px-3 rounded bg-light border-start border-3 border-success small h-100">
+              <strong class="text-success d-block mb-1"><i class="bi bi-check-circle-fill me-1"></i> Active Researcher Verification</strong>
+              <span class="text-muted" style="font-size: 0.8rem;">Professors with verified peer-reviewed publications within 2025–2026 are marked ORCID Active so you can proceed with confidence.</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-2 px-3 rounded bg-light border-start border-3 border-danger small h-100">
+              <strong class="text-danger d-block mb-1"><i class="bi bi-shield-slash-fill me-1"></i> Inactivity Guardrail &amp; Block</strong>
+              <span class="text-muted" style="font-size: 0.8rem;">Zero works or grants in 3+ years flags the professor as Research Inactive / Ceased, locking outreach to protect your time.</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-2 px-3 rounded bg-light border-start border-3 border-dark small h-100">
+              <strong class="text-dark d-block mb-1"><i class="bi bi-link-45deg me-1"></i> Direct ORCID Audit Links</strong>
+              <span class="text-muted" style="font-size: 0.8rem;">Every profile card provides a direct link to the persistent ORCID identifier to review complete publication histories.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MY SAVED LABS TRACKER SECTION ==================== -->
+    <section class="mt-5 pt-4 border-top" id="trackerSection">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          <h2 class="h3 fw-bold text-maroon mb-0">
+            <i class="bi bi-bookmark-star-fill text-gold me-2"></i>My Research Application Tracker
+          </h2>
+          <small class="text-muted">Save labs, star your favorites, track where you've applied, and keep private notes.</small>
+        </div>
+        <button class="btn btn-outline-secondary btn-sm" onclick="ApplicationTracker.exportJSON()">
+          <i class="bi bi-download me-1"></i> Export Tracker (JSON)
+        </button>
+      </div>
+
+      <div class="small text-muted mb-2" id="trackerModeNote" aria-live="polite"></div>
+      <div class="d-flex flex-wrap gap-2 mb-3" id="trackerViewBar" role="group" aria-label="Filter saved labs"></div>
+
+      <!-- Tracker List Container -->
+      <div id="trackerList">
+        <!-- Rendered by tracker.js -->
+      </div>
+
+      <!-- Empty Tracker State -->
+      <div class="text-center py-5 bg-white rounded border d-none" id="trackerEmptyState">
+        <div class="display-6 text-muted mb-2"><i class="bi bi-bookmark-plus"></i></div>
+        <h3 class="h5 text-dark">Your Research Tracker is Empty</h3>
+        <p class="text-muted small mb-3">Click the star on any professor's card above to save the lab, then track your status and keep personal notes here.</p>
+        <a href="#exploreSection" class="btn btn-sm btn-maroon">Browse Opportunities</a>
+      </div>
+    </section>
+
+    <!-- ==================== BC STUDENT FUNDING & RESEARCH GUIDE ==================== -->
+    <section class="mt-5 pt-4 border-top" id="guideSection">
+      <div class="bg-white p-4 p-md-5 rounded shadow-sm border">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <i class="bi bi-journal-text fs-3 text-maroon"></i>
+          <h2 class="h3 fw-bold mb-0 text-maroon">Boston College Student Research & Funding Guide</h2>
+        </div>
+        <p class="text-muted">
+          How to get paid, earn course credit, and fund your own research at Boston College. Every item links to or comes from an official BC page (checked November 2026).
+        </p>
+
+        <div class="row g-4 mt-1">
+          <!-- Undergraduate Research Fellowship (verified 2026-11-10) -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-top border-4 border-maroon shadow-sm p-3">
+              <span class="badge bg-gold text-dark mb-2 align-self-start fw-bold">Paid · University-wide</span>
+              <h3 class="h5 fw-bold text-dark">Undergraduate Research Fellowship (URF)</h3>
+              <p class="small text-muted mb-2">
+                BC pays undergraduates to assist on a faculty member's research project. <strong>The professor applies for the funding, not you</strong>, so the first step is always finding a professor who wants your help.
+              </p>
+              <ul class="small text-muted ps-3 mb-2">
+                <li>Funding requests come from the faculty member whose project you'll assist</li>
+                <li>Reviewed and funded three times a year: fall, spring, and summer</li>
+                <li>Ordinarily paid work, not academic credit</li>
+                <li>Some departments add their own process (Economics has a central application; see its department note)</li>
+              </ul>
+              <a class="small" href="https://bc.edu/bc-web/academics/sites/office-of-provost/about/provost-committees/university-fellowship-committee/undergraduate-research-support.html" target="_blank" rel="noopener noreferrer">Official URF page</a>
+            </div>
+          </div>
+
+          <!-- Academic Credit (verified against each department's page) -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-top border-4 border-primary shadow-sm p-3">
+              <span class="badge bg-primary text-white mb-2 align-self-start fw-bold">Academic Credit</span>
+              <h3 class="h5 fw-bold text-dark">Research for Course Credit</h3>
+              <p class="small text-muted mb-2">
+                Each department runs its own research and thesis courses. You usually need a faculty mentor and a signed contract first. Examples from department pages:
+              </p>
+              <ul class="small text-muted ps-3 mb-2">
+                <li><strong>PSYC2205 / PSYC2206:</strong> Psychology research or independent study (about 8-10 hrs/week, up to 3 credits)</li>
+                <li><strong>Biology:</strong> research for credit, 3 credits/semester (10+ hrs/week); thesis BIOL4962</li>
+                <li><strong>CSCI4961:</strong> CS Honors Thesis (two sections, senior year)</li>
+                <li><strong>EESC5595:</strong> Earth &amp; Environmental Sciences Senior Thesis</li>
+                <li><strong>NURS4911:</strong> Nursing independent study (pass/fail)</li>
+              </ul>
+              <span class="small text-muted">Pick a department above to see its note. You generally can't be paid and get credit for the same hours.</span>
+            </div>
+          </div>
+
+          <!-- Other BC funding (verified 2026-11-10) -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-top border-4 border-success shadow-sm p-3">
+              <span class="badge bg-success text-white mb-2 align-self-start fw-bold">More Funding</span>
+              <h3 class="h5 fw-bold text-dark">Grants for Your Own Research</h3>
+              <p class="small text-muted mb-2">
+                BC's University Fellowships Committee also funds student-driven research:
+              </p>
+              <ul class="small text-muted ps-3 mb-2">
+                <li><strong>Advanced Study Grants:</strong> student-designed summer projects, including thesis research (requires a faculty nominator)</li>
+                <li><strong>Conference Travel Grants:</strong> up to 50% of costs ($500 max) to present your research</li>
+                <li>Several travel and research fellowships for specific regions and topics</li>
+              </ul>
+              <a class="small" href="https://bc.edu/bc-web/academics/sites/office-of-provost/about/provost-committees/university-fellowship-committee/undergraduate-research-support.html" target="_blank" rel="noopener noreferrer">See all programs and deadlines</a>
+            </div>
+          </div>
+          <!-- Cold Email Etiquette -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-top border-4 border-warning shadow-sm p-3">
+              <span class="badge bg-warning text-dark mb-2 align-self-start fw-bold">Etiquette</span>
+              <h3 class="h5 fw-bold text-dark">Outreach Best Practices</h3>
+              <p class="small text-muted mb-2">
+                BC professors receive dozens of generic inquiries. Here is how to stand out:
+              </p>
+              <ul class="small text-muted ps-3 mb-0">
+                <li>Email from your official <code>@bc.edu</code> account</li>
+                <li>Mention a <strong>specific recent paper</strong> of theirs (listed on each card)</li>
+                <li>Follow their preferred application method (Google Form vs. Email)</li>
+                <li>Attach your resume and unofficial degree audit</li>
+                <li>Check the lab's undergrad badges and when that evidence is from before sending</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white py-4 mt-auto border-top">
+    <div class="container-fluid px-lg-4 d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <div class="d-flex align-items-center gap-2">
+        <div class="bc-emblem" style="width: 32px; height: 32px; font-size: 0.9rem;">BC</div>
+        <div>
+          <span class="fw-bold text-maroon">EagleResearch</span> · Boston College Research Portal
+          <div class="text-muted small">Independent student-focused resource cross-referencing faculty bios, lab pages, and ORCID registries.</div>
+        </div>
+      </div>
+      <div class="small text-muted text-end">
+        <div>Academic Reference Term: <strong>Fall 2026</strong></div>
+        <div>Verified November 2026 · BC directories, ORCID &amp; OpenAlex</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- 1. PROFESSOR DETAIL MODAL -->
+  <div class="modal fade" id="professorDetailModal" tabindex="-1" aria-hidden="true" aria-labelledby="detailProfName">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-maroon text-white">
+          <div>
+            <h2 class="modal-title h5 fw-bold mb-0" id="detailProfName">Professor Name</h2>
+            <div class="small text-gold-light" id="detailProfTitle">Title · Department</div>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 custom-scrollbar">
+          
+          <!-- ORCID Status Box in Detail Modal -->
+          <div id="detailOrcidInfo"></div>
+
+          <!-- Lab Overview -->
+          <div class="mb-4">
+            <h3 class="h6 fw-bold text-maroon text-uppercase small tracking-wide">Lab & Research Focus</h3>
+            <h3 class="h5 fw-bold text-dark" id="detailProfLab">Lab Name</h3>
+            <p class="text-secondary small" id="detailResearchSummary">Research summary...</p>
+          </div>
+
+          <!-- Key Projects -->
+          <div class="mb-4">
+            <h3 class="h6 fw-bold text-maroon text-uppercase small tracking-wide">Current Active Projects</h3>
+            <ul class="list-unstyled small ps-1" id="detailProjectsList"></ul>
+          </div>
+
+          <!-- Prerequisites & Commitment Grid -->
+          <div class="row g-3 mb-4 bg-light p-3 rounded">
+            <div class="col-md-4">
+              <span class="text-muted small d-block">Time Commitment:</span>
+              <strong class="text-dark small" id="detailHours">10 hrs/week</strong>
+            </div>
+            <div class="col-md-4">
+              <span class="text-muted small d-block">Minimum Duration:</span>
+              <strong class="text-dark small" id="detailCommitment">2 semesters</strong>
+            </div>
+            <div class="col-md-4">
+              <span class="text-muted small d-block">Eligible Class Years:</span>
+              <strong class="text-dark small" id="detailEligibility">Sophomore, Junior</strong>
+            </div>
+            <div class="col-12 border-top pt-2">
+              <span class="text-muted small d-block mb-1">Compensation / Credit:</span>
+              <div id="detailCompensation"></div>
+            </div>
+          </div>
+
+          <!-- Skills Needed -->
+          <div class="mb-4">
+            <h3 class="h6 fw-bold text-dark small mb-2">Required Coursework & Skills:</h3>
+            <div class="mb-2" id="detailRequiredSkills"></div>
+            <h3 class="h6 fw-bold text-dark small mb-2">Preferred / Helpful Skills:</h3>
+            <div id="detailPreferredSkills"></div>
+          </div>
+
+          <!-- Representative Publication -->
+          <div class="mb-4 p-3 border-start border-4 border-maroon bg-light rounded-end">
+            <span class="text-muted small fw-bold text-uppercase d-block mb-1">
+              <i class="bi bi-file-earmark-text text-maroon me-1"></i>Representative Publication from ORCID:
+            </span>
+            <span class="small fst-italic text-dark fw-semibold" id="detailSamplePaper">"Paper title"</span>
+            <div class="small text-muted mt-1">Reading this publication before emailing demonstrates serious preparation.</div>
+          </div>
+
+          <!-- How to Apply -->
+          <div class="mb-3">
+            <h3 class="h6 fw-bold text-maroon text-uppercase small tracking-wide">Application Process</h3>
+            <p class="small text-secondary" id="detailApplyProcess">Process instructions...</p>
+          </div>
+
+          <!-- Contact & Location Box -->
+          <div class="p-3 bg-light rounded small d-none" id="detailContactLocked"></div>
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 p-3 bg-light rounded" id="detailContactBlock">
+            <div>
+              <div class="small"><strong>Location:</strong> <span id="detailProfLocation">Campus Location</span></div>
+              <div class="small"><strong>Email:</strong> <a href="#" id="detailProfEmail">email@bc.edu</a> · <strong>Phone:</strong> <span id="detailProfPhone">phone</span></div>
+              <div class="small"><strong>ORCID:</strong> <a href="#" target="_blank" id="detailProfOrcidLink">0000-0000-0000-0000</a></div>
+            </div>
+            <div class="d-flex gap-2">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary" id="detailProfLabLink">
+                <i class="bi bi-globe me-1"></i> Lab Site
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary" id="detailProfBcLink">
+                <i class="bi bi-link-45deg me-1"></i> BC Bio
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-maroon btn-sm" id="detailApplyActionBtn">
+            <i class="bi bi-box-arrow-up-right me-1"></i> Apply / Contact
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. STREAMLINED APPLICATION & CONTACT MODAL (Replaces draft email generator) -->
+  <div class="modal fade" id="applyModal" tabindex="-1" aria-hidden="true" aria-labelledby="applyProfName">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-maroon text-white">
+          <div>
+            <h2 class="modal-title h5 fw-bold mb-0">
+              <i class="bi bi-box-arrow-up-right me-2"></i>Apply / Contact Faculty
+            </h2>
+            <small class="text-gold-light">Direct application links and contact information</small>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+
+          <!-- Recipient Summary -->
+          <div class="p-3 bg-light rounded mb-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <strong class="text-maroon fs-5" id="applyProfName">Professor</strong>
+                <div class="small text-muted" id="applyProfDept">Title · Department</div>
+                <div class="small text-secondary fw-semibold" id="applyProfLab">Lab</div>
+                <div class="small text-muted mt-1"><i class="bi bi-geo-alt me-1"></i><span id="applyProfLocation">Office</span></div>
+              </div>
+              <div id="applyOrcidStatusBadge"></div>
+            </div>
+          </div>
+
+          <!-- Preferred Application Action (Form vs. Direct Email) -->
+          <div id="applyActionButtonsContainer">
+            <!-- Dynamically populated by ApplyHandler -->
+          </div>
+
+          <!-- Detailed Instructions -->
+          <div class="mb-3">
+            <h3 class="h6 fw-bold text-dark small text-uppercase tracking-wide mb-1">Application Guidelines:</h3>
+            <p class="small text-secondary bg-light p-3 rounded mb-0" id="applyInstructionsText">
+              Instructions...
+            </p>
+          </div>
+
+          <!-- Suggested Materials Checklist -->
+          <div class="mb-3">
+            <h3 class="h6 fw-bold text-dark small text-uppercase tracking-wide mb-2">Checklist of Materials to Have Ready:</h3>
+            <ul class="list-unstyled small ps-1 mb-0" id="applyMaterialsList">
+              <li class="mb-1"><i class="bi bi-check2-square text-maroon me-2"></i>Current Resume or Academic CV</li>
+              <li class="mb-1"><i class="bi bi-check2-square text-maroon me-2"></i>Unofficial Degree Audit / Transcript</li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="modal-footer bg-light d-flex justify-content-between">
+          <button type="button" class="btn btn-outline-success btn-sm" onclick="ApplyHandler.saveToTrackerFromApply()">
+            <i class="bi bi-bookmark-plus me-1"></i> Save to My Tracker
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. ORCID INACTIVITY BLOCK SAFEGUARD MODAL -->
+  <div class="modal fade" id="orcidBlockedModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-danger">
+        <div class="modal-header bg-danger text-white">
+          <h2 class="modal-title h5 fw-bold fs-6">
+            <i class="bi bi-shield-slash-fill me-2"></i>Outreach Blocked: Research Inactive
+          </h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="text-center mb-3">
+            <div class="display-5 text-danger"><i class="bi bi-person-x-fill"></i></div>
+            <h5 class="fw-bold text-dark mt-2 mb-0" id="blockedProfName">Professor</h5>
+            <small class="text-muted" id="blockedProfDept">Department</small>
+          </div>
+
+          <div class="alert alert-danger py-2 px-3 small border-start border-4 border-danger mb-3">
+            <strong class="d-block text-danger">Outreach Safeguard Triggered:</strong>
+            <span id="blockedReasonText">Reason text...</span>
+          </div>
+
+          <div class="bg-light p-3 rounded small mb-3">
+            <div class="d-flex justify-content-between py-1 border-bottom">
+              <span class="text-muted">ORCID Identifier:</span>
+              <span class="fw-bold" id="blockedOrcidId">0000-0000-0000-0000</span>
+            </div>
+            <div class="d-flex justify-content-between py-1 border-bottom">
+              <span class="text-muted">Last Active Publication:</span>
+              <span class="fw-bold text-danger" id="blockedLastYear">Year</span>
+            </div>
+            <div class="d-flex justify-content-between py-1">
+              <span class="text-muted">Status in Portal:</span>
+              <span class="badge bg-danger">Do Not Email (Research Ceased)</span>
+            </div>
+          </div>
+
+          <p class="small text-secondary mb-0">
+            <strong>Why is outreach blocked for this professor?</strong><br>
+            Sending research applications to professors who have transitioned to executive administration, teaching-only appointments, or retirement causes frustration and ghosting. Our ORCID sentinel prevents you from wasting time on inactive laboratories.
+          </p>
+        </div>
+        <div class="modal-footer bg-light d-flex justify-content-between">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary btn-sm" id="blockedOrcidLink">
+            <i class="bi bi-person-badge me-1"></i> Verify on ORCID.org
+          </a>
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. ORCID DETAIL INSPECTOR MODAL -->
+  <div class="modal fade" id="orcidDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white">
+          <div class="d-flex align-items-center gap-2">
+            <div class="orcid-logo-icon">iD</div>
+            <div>
+              <h2 class="modal-title h5 fw-bold mb-0">ORCID Registry Profile Inspector</h2>
+              <small class="text-light-emphasis">Verified Open Researcher and Contributor Identifier</small>
+            </div>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="d-flex justify-content-between align-items-start mb-3 pb-2 border-bottom">
+            <div>
+              <h5 class="fw-bold text-maroon mb-0" id="orcidModalProfName">Professor</h5>
+              <div class="small text-muted" id="orcidModalProfDept">Department</div>
+              <div class="small mt-1">
+                <strong>ORCID iD:</strong> <a href="#" target="_blank" rel="noopener noreferrer" id="orcidModalLink">https://orcid.org/0000...</a>
+              </div>
+            </div>
+            <div id="orcidModalStatusBadge"></div>
+          </div>
+
+          <!-- Inactivity Alert if applicable -->
+          <div class="alert alert-danger py-2 px-3 small border-start border-4 border-danger d-none mb-3" id="orcidModalInactivityAlert">
+            <strong class="d-block text-danger"><i class="bi bi-shield-x me-1"></i> Research Inactivity Notice:</strong>
+            <span id="orcidModalWarningText">Inactivity warning text...</span>
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-4">
+              <div class="p-3 bg-light rounded text-center">
+                <span class="text-muted small d-block">Latest Work Year:</span>
+                <strong class="fs-4 text-dark" id="orcidModalLastYear">2026</strong>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 bg-light rounded text-center">
+                <span class="text-muted small d-block">Total Publications:</span>
+                <strong class="fs-4 text-dark" id="orcidModalTotalWorks">--</strong>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 bg-light rounded text-center">
+                <span class="text-muted small d-block">Active Research Grants:</span>
+                <strong class="fs-4 text-dark" id="orcidModalActiveGrants">--</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 bg-light border rounded mb-3">
+            <span class="text-muted small fw-bold text-uppercase d-block mb-1">Most Recent Peer-Reviewed Publication on Record:</span>
+            <div class="fw-bold text-dark" id="orcidModalRecentPaper">"Paper title"</div>
+            <div class="small text-secondary mt-1"><strong>Journal / Publisher:</strong> <span id="orcidModalJournal">Journal Name</span></div>
+          </div>
+
+          <p class="small text-muted mb-0">
+            <i class="bi bi-info-circle me-1"></i> Records are synchronized with the ORCID Public API to verify research continuity and ensure Boston College students only contact actively investigating faculty.
+          </p>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer"></div>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <!-- Department note modal (opened from each card's department link) -->
+  <div class="modal fade" id="deptNoteModal" tabindex="-1" aria-labelledby="deptNoteModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5 text-maroon fw-bold" id="deptNoteModalTitle">Department note</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="deptNoteModalBody"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-maroon btn-sm" id="deptNoteModalFilterBtn">Show all professors in this department</button>
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign-in modal (passwordless @bc.edu email link) -->
+  <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-maroon text-white">
+          <h2 class="modal-title fs-5 fw-bold" id="signInModalTitle"><i class="bi bi-person-circle me-2"></i>Sign in with your BC email</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="signInForm" onsubmit="Auth.sendLink(event)" novalidate>
+            <p class="small text-muted"><span id="signInReason" class="fw-semibold text-dark"></span>Signing in with your BC email unlocks professor contact details and links, applying, and your saved-labs tracker. No password needed: we'll email you a one-time sign-in link.</p>
+            <label for="signInEmail" class="form-label small fw-bold">Boston College email</label>
+            <input type="email" class="form-control" id="signInEmail" placeholder="yourname@bc.edu" autocomplete="email" required aria-describedby="signInError">
+            <div class="small text-danger mt-2" id="signInError" role="alert"></div>
+            <button type="submit" class="btn btn-maroon w-100 mt-3" id="signInSubmit"><i class="bi bi-envelope-arrow-up me-1"></i>Email me a sign-in link</button>
+            <p class="small text-muted mt-3 mb-0">Only @bc.edu addresses can sign in. Your saved labs and notes are private: only you can see them.</p>
+          </form>
+          <div id="signInSent" class="d-none text-center" role="status">
+            <div class="display-6 text-success mb-2"><i class="bi bi-envelope-check"></i></div>
+            <p class="mb-1">Check your inbox at <strong id="signInSentTo"></strong>.</p>
+            <p class="small text-muted mb-0">Click the link in the email to finish signing in. It may take a minute to arrive; check your spam folder too.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.min.js"></script>
+  <script src="js/config.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/dept-notes.js"></script>
+  <script src="js/contacts.js"></script>
+  <script src="js/tracker.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/email-generator.js"></script>
+  <script src="js/audit-view.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

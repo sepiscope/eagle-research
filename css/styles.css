@@ -1,0 +1,322 @@
+/**
+ * Boston College Research Opportunities Portal Styles
+ * Color Palette: BC Maroon (#8A100B, #660000), BC Gold (#BC9B6A, #D4AF37), ORCID Green (#A6CE39)
+ */
+
+:root {
+  --bc-maroon: #8A100B;
+  --bc-maroon-dark: #630805;
+  --bc-maroon-light: #ab1d17;
+  --bc-gold: #BC9B6A;
+  --bc-gold-light: #e5d3b3;
+  --bc-gold-dark: #8e6f3d;
+  --orcid-green: #A6CE39;
+  --bc-dark: #1f2421;
+  --bc-gray-bg: #f8f9fa;
+  --bc-card-border: #e9ecef;
+  --stale-warning-bg: #fff9e6;
+  --stale-warning-border: #f59e0b;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bc-gray-bg);
+  color: #2b2d42;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography & Brand Colors */
+.text-maroon {
+  color: var(--bc-maroon) !important;
+}
+
+.text-gold {
+  color: var(--bc-gold-dark) !important;
+}
+
+.text-orcid {
+  color: #7b9e1e !important;
+}
+
+.bg-maroon {
+  background-color: var(--bc-maroon) !important;
+  color: #ffffff;
+}
+
+.bg-maroon-dark {
+  background-color: var(--bc-maroon-dark) !important;
+  color: #ffffff;
+}
+
+.bg-gold {
+  background-color: var(--bc-gold) !important;
+  color: #1f2421;
+}
+
+.border-maroon {
+  border-color: var(--bc-maroon) !important;
+}
+
+.border-gold {
+  border-color: var(--bc-gold) !important;
+}
+
+.btn-maroon {
+  background-color: var(--bc-maroon);
+  color: #ffffff;
+  border-color: var(--bc-maroon);
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-maroon:hover, .btn-maroon:focus {
+  background-color: var(--bc-maroon-dark);
+  color: #ffffff;
+  border-color: var(--bc-maroon-dark);
+}
+
+.btn-gold {
+  background-color: var(--bc-gold);
+  color: #212529;
+  border-color: var(--bc-gold);
+  font-weight: 500;
+}
+
+.btn-gold:hover, .btn-gold:focus {
+  background-color: var(--bc-gold-dark);
+  color: #ffffff;
+  border-color: var(--bc-gold-dark);
+}
+
+.btn-outline-maroon {
+  color: var(--bc-maroon);
+  border-color: var(--bc-maroon);
+}
+
+.btn-outline-maroon:hover {
+  background-color: var(--bc-maroon);
+  color: #ffffff;
+}
+
+/* Top Navbar & Header */
+.bc-navbar {
+  border-bottom: 3px solid var(--bc-gold);
+}
+
+.bc-emblem {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--bc-gold), #8e6f3d);
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  letter-spacing: -0.5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.orcid-logo-icon {
+  width: 30px;
+  height: 30px;
+  background-color: var(--orcid-green);
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-family: -apple-system, sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.orcid-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff !important;
+}
+
+/* Semester Status Bar */
+.semester-status-bar {
+  background-color: #212529;
+  color: #e9ecef;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #343a40;
+}
+
+/* Stat Metric Cards */
+.stat-card {
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 1.15rem;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+/* Quick Filter Buttons */
+.quick-filter-btn {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #4b5563;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.quick-filter-btn:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.quick-filter-btn.active {
+  background-color: var(--bc-maroon);
+  color: #ffffff;
+  border-color: var(--bc-maroon);
+  box-shadow: 0 2px 4px rgba(138, 16, 11, 0.2);
+}
+
+/* Department Pills */
+.dept-pill {
+  font-size: 0.875rem;
+  padding: 0.4rem 0.95rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+/* School Pills — slightly larger, bolder than dept pills */
+.school-pill {
+  font-size: 0.9rem;
+  padding: 0.45rem 1rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  border-width: 1.5px;
+}
+
+/* Breadcrumb-style school/dept selects */
+.breadcrumb-select {
+  border-color: var(--bc-maroon);
+  color: var(--bc-maroon);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.breadcrumb-select:focus {
+  border-color: var(--bc-maroon);
+  box-shadow: 0 0 0 0.2rem rgba(138, 16, 11, 0.15);
+}
+
+.breadcrumb-select:hover {
+  background-color: #fdf4f4;
+}
+
+#schoolDeptBreadcrumb .breadcrumb-arrow {
+  font-size: 0.9rem;
+}
+
+.bg-gold-light {
+  background-color: var(--bc-gold-light) !important;
+}
+
+/* Faculty Cards */
+.faculty-card {
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #ffffff;
+  /* Prevent sibling cards in the same row from stretching when one
+     card's collapse panel is open. Each card sizes to its own content. */
+  align-self: flex-start;
+}
+
+.faculty-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+}
+
+/* Flagged Stale Card Style */
+.card-stale-bg {
+  background: linear-gradient(to bottom, #ffffff, #fffdf8);
+  border-left: 5px solid var(--stale-warning-border) !important;
+}
+
+/* Inactive ORCID Card Style (Research Ceased) */
+.card-orcid-inactive-bg {
+  background: linear-gradient(to bottom, #ffffff, #fff5f5);
+  border-left: 5px solid #dc3545 !important;
+  opacity: 0.92;
+}
+
+.border-gold-light {
+  border-color: var(--bc-gold-light) !important;
+}
+
+.save-btn {
+  transition: all 0.2s ease;
+}
+
+/* Card Collapse / Expand Button */
+.card-collapse-btn {
+  font-weight: 500;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.65rem;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+}
+
+.card-collapse-btn[aria-expanded="true"] {
+  background-color: var(--bc-maroon);
+  color: #ffffff;
+  border-color: var(--bc-maroon);
+}
+
+.card-collapse-btn[aria-expanded="true"] .bi-chevron-down {
+  transform: rotate(180deg);
+}
+
+.card-collapse-btn .bi-chevron-down {
+  transition: transform 0.2s ease;
+}
+
+/* Toast Container */
+#toastContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1080;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  border-top: 1px solid #e5e7eb;
+}
