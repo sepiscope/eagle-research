@@ -1666,7 +1666,7 @@ const BC_FACULTY_DATA = [
   // ── NEW FACULTY: Multi-School Expansion (November 2026) ─────────────────
   {
     "id": "stm-andre-brouillette",
-    "name": "Rev. André Brouillette, S.J.",
+    "name": "Rev. Dr. André Brouillette, S.J.",
     "title": "Associate Professor of Systematic and Spiritual Theology",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -1926,7 +1926,7 @@ const BC_FACULTY_DATA = [
   // -- Added 2026-11-10: research-active faculty from BC directories (verified via ORCID + OpenAlex) --
   {
     "id": "economics-lucas-coffman",
-    "name": "Lucas Coffman",
+    "name": "Dr. Lucas Coffman",
     "title": "Associate Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -1975,7 +1975,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-ruth-langer",
-    "name": "Ruth Langer",
+    "name": "Dr. Ruth Langer",
     "title": "Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -2018,7 +2018,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-stanley-uche-anozie",
-    "name": "Stanley Uche Anozie",
+    "name": "Dr. Stanley Uche Anozie",
     "title": "Assistant Professor of the Practice",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -2061,7 +2061,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-zhijie-xiao",
-    "name": "Zhijie Xiao",
+    "name": "Dr. Zhijie Xiao",
     "title": "Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -2110,7 +2110,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-lauren-honig",
-    "name": "Lauren Honig",
+    "name": "Dr. Lauren Honig",
     "title": "Associate Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -2153,7 +2153,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-timothy-muldoon",
-    "name": "Timothy Muldoon",
+    "name": "Dr. Timothy Muldoon",
     "title": "Associate Professor of the Practice",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -2196,7 +2196,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-gorica-petrovich",
-    "name": "Gorica Petrovich",
+    "name": "Dr. Gorica Petrovich",
     "title": "Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -2247,7 +2247,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-lisa-sowle-cahill",
-    "name": "Lisa Sowle Cahill",
+    "name": "Dr. Lisa Sowle Cahill",
     "title": "J. Donald Monan Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -2290,7 +2290,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-iziah-topete",
-    "name": "Iziah Topete",
+    "name": "Dr. Iziah Topete",
     "title": "Assistant Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -2333,7 +2333,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-eddie-bonilla",
-    "name": "Eddie Bonilla",
+    "name": "Dr. Eddie Bonilla",
     "title": "Assistant Professor",
     "department": "History",
     "departmentId": "history",
@@ -2376,7 +2376,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-rahul-deb",
-    "name": "Rahul Deb",
+    "name": "Dr. Rahul Deb",
     "title": "Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -2425,7 +2425,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-charles-hoffman",
-    "name": "Charles Hoffman",
+    "name": "Dr. Charles Hoffman",
     "title": "Professor & Department Chair",
     "department": "Biology",
     "departmentId": "biology",
@@ -2468,7 +2468,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-andrzej-herczynski",
-    "name": "Andrzej Herczyński",
+    "name": "Dr. Andrzej Herczyński",
     "title": "Research Professor",
     "department": "Physics",
     "departmentId": "physics",
@@ -2517,7 +2517,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-michelle-meyer",
-    "name": "Michelle Meyer",
+    "name": "Dr. Michelle Meyer",
     "title": "Professor, Associate Chair",
     "department": "Biology",
     "departmentId": "biology",
@@ -2568,7 +2568,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-jaromir-nosal",
-    "name": "Jaromir Nosal",
+    "name": "Dr. Jaromir Nosal",
     "title": "Associate Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -2617,7 +2617,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "engineering-siddhartan-govindasamy",
-    "name": "Siddhartan Govindasamy",
+    "name": "Dr. Siddhartan Govindasamy",
     "title": "Professor, Sabet Family Dean's Faculty Fellow; Interim Department Chair",
     "department": "Engineering",
     "departmentId": "engineering",
@@ -2660,7 +2660,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-sharlene-hesse-biber",
-    "name": "Sharlene Hesse-Biber",
+    "name": "Dr. Sharlene Hesse-Biber",
     "title": "Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -2703,7 +2703,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-michael-c-magree",
-    "name": "Michael C. Magree, S.J.",
+    "name": "Dr. Michael C. Magree, S.J.",
     "title": "Associate Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -2746,7 +2746,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-christopher-kenaley",
-    "name": "Christopher Kenaley",
+    "name": "Dr. Christopher Kenaley",
     "title": "Associate Professor of the Practice",
     "department": "Biology",
     "departmentId": "biology",
@@ -2797,7 +2797,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-m-utku-unver",
-    "name": "M. Utku Ünver",
+    "name": "Dr. M. Utku Ünver",
     "title": "Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -2846,7 +2846,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-fernando-bizzarro",
-    "name": "Fernando Bizzarro",
+    "name": "Dr. Fernando Bizzarro",
     "title": "Assistant Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -2889,7 +2889,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-kengthsagn-louis",
-    "name": "Kengthsagn Louis",
+    "name": "Dr. Kengthsagn Louis",
     "title": "Assistant Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -2932,7 +2932,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-gregory-fried",
-    "name": "Gregory Fried",
+    "name": "Dr. Gregory Fried",
     "title": "Professor; Convener of M.A. program in Philosophy, Law, and Policy",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -2975,7 +2975,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-michael-graf",
-    "name": "Michael Graf",
+    "name": "Dr. Michael Graf",
     "title": "Professor of Physics",
     "department": "Physics",
     "departmentId": "physics",
@@ -3024,7 +3024,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "earth-xingchen-tony-wang",
-    "name": "Xingchen (Tony) Wang",
+    "name": "Dr. Xingchen (Tony) Wang",
     "title": "Assistant Professor",
     "department": "Earth & Environmental Sciences",
     "departmentId": "earth",
@@ -3075,7 +3075,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-diane-jo-bart-plange",
-    "name": "Diane-Jo Bart-Plange",
+    "name": "Dr. Diane-Jo Bart-Plange",
     "title": "Assistant Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -3126,7 +3126,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-catherine-cornille",
-    "name": "Catherine Cornille",
+    "name": "Dr. Catherine Cornille",
     "title": "Professor; Newton College Alumnae Chair of Western Culture",
     "department": "Theology",
     "departmentId": "theology",
@@ -3169,7 +3169,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-latrica-e-best",
-    "name": "Latrica E. Best",
+    "name": "Dr. Latrica E. Best",
     "title": "Associate Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -3212,7 +3212,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-hanno-foerster",
-    "name": "Hanno Foerster",
+    "name": "Dr. Hanno Foerster",
     "title": "Assistant Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -3261,7 +3261,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-peter-ireland",
-    "name": "Peter Ireland",
+    "name": "Dr. Peter Ireland",
     "title": "Murray and Monti Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -3310,7 +3310,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-caroline-smith",
-    "name": "Caroline Smith",
+    "name": "Dr. Caroline Smith",
     "title": "Straus Family Sesquicentennial Assistant Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -3361,7 +3361,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-conevery-bolton-valencius",
-    "name": "Conevery Bolton Valencius",
+    "name": "Dr. Conevery Bolton Valencius",
     "title": "Professor",
     "department": "History",
     "departmentId": "history",
@@ -3404,7 +3404,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-michael-glass",
-    "name": "Michael Glass",
+    "name": "Dr. Michael Glass",
     "title": "Associate Professor, Director of the Honors Program",
     "department": "History",
     "departmentId": "history",
@@ -3447,7 +3447,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-robert-s-ross",
-    "name": "Robert S. Ross",
+    "name": "Dr. Robert S. Ross",
     "title": "Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -3490,7 +3490,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-cristina-maier",
-    "name": "Cristina Maier",
+    "name": "Dr. Cristina Maier",
     "title": "Assistant Professor of the Practice",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -3533,7 +3533,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-amy-tishelman",
-    "name": "Amy Tishelman",
+    "name": "Dr. Amy Tishelman",
     "title": "Research Associate Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -3576,7 +3576,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-gregory-floyd",
-    "name": "Gregory Floyd",
+    "name": "Dr. Gregory Floyd",
     "title": "Assistant Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -3619,7 +3619,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-juan-manuel-gonzalez-rosa",
-    "name": "Juan Manuel González-Rosa",
+    "name": "Dr. Juan Manuel González-Rosa",
     "title": "Assistant Professor",
     "department": "Biology",
     "departmentId": "biology",
@@ -3662,7 +3662,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "earth-noah-p-snyder",
-    "name": "Noah P. Snyder",
+    "name": "Dr. Noah P. Snyder",
     "title": "Professor",
     "department": "Earth & Environmental Sciences",
     "departmentId": "earth",
@@ -3705,7 +3705,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-farid-farrokhi",
-    "name": "Farid Farrokhi",
+    "name": "Dr. Farid Farrokhi",
     "title": "Associate Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -3754,7 +3754,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-vicki-losick",
-    "name": "Vicki Losick",
+    "name": "Dr. Vicki Losick",
     "title": "Associate Professor",
     "department": "Biology",
     "departmentId": "biology",
@@ -3811,7 +3811,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-benedetta-flebus",
-    "name": "Benedetta Flebus",
+    "name": "Dr. Benedetta Flebus",
     "title": "Associate Professor of Physics",
     "department": "Physics",
     "departmentId": "physics",
@@ -3860,7 +3860,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-thomas-murphy",
-    "name": "Thomas Murphy, S.J.",
+    "name": "Dr. Thomas Murphy, S.J.",
     "title": "Associate Professor of the Practice",
     "department": "History",
     "departmentId": "history",
@@ -3903,7 +3903,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-kristin-lunz-trujillo",
-    "name": "Kristin Lunz Trujillo",
+    "name": "Dr. Kristin Lunz Trujillo",
     "title": "Assistant Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -3946,7 +3946,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-eileen-carroll-sweeney",
-    "name": "Eileen Carroll Sweeney",
+    "name": "Dr. Eileen Carroll Sweeney",
     "title": "Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -3989,7 +3989,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-zine-magubane",
-    "name": "Zine Magubane",
+    "name": "Dr. Zine Magubane",
     "title": "Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -4032,7 +4032,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-david-hopkins",
-    "name": "David Hopkins",
+    "name": "Dr. David Hopkins",
     "title": "Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -4075,7 +4075,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-jeremy-d-wilkins",
-    "name": "Jeremy D. Wilkins",
+    "name": "Dr. Jeremy D. Wilkins",
     "title": "Associate Professor; Director, Lonergan Institute",
     "department": "Theology",
     "departmentId": "theology",
@@ -4118,7 +4118,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "earth-susan-shufen-pan",
-    "name": "Susan (Shufen) Pan",
+    "name": "Dr. Susan (Shufen) Pan",
     "title": "Associate Professor",
     "department": "Earth & Environmental Sciences",
     "departmentId": "earth",
@@ -4161,7 +4161,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-demetrius-murphy",
-    "name": "Demetrius Murphy",
+    "name": "Dr. Demetrius Murphy",
     "title": "Assistant Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -4204,7 +4204,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-richard-kearney",
-    "name": "Richard Kearney",
+    "name": "Dr. Richard Kearney",
     "title": "Charles Seelig Professor in Philosophy",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -4247,7 +4247,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-jonathan-laurence",
-    "name": "Jonathan Laurence",
+    "name": "Dr. Jonathan Laurence",
     "title": "Professor, Director of the Clough Center",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -4290,7 +4290,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-robert-stanton",
-    "name": "Robert Stanton",
+    "name": "Dr. Robert Stanton",
     "title": "Associate Professor; Director, M.A. Program",
     "department": "History",
     "departmentId": "history",
@@ -4333,7 +4333,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-xiaorui-huang",
-    "name": "Xiaorui Huang",
+    "name": "Dr. Xiaorui Huang",
     "title": "Assistant Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -4376,7 +4376,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-andrew-barrette",
-    "name": "Andrew Barrette",
+    "name": "Dr. Andrew Barrette",
     "title": "Associate Professor of the Practice",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -4419,7 +4419,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-sarah-babb",
-    "name": "Sarah Babb",
+    "name": "Dr. Sarah Babb",
     "title": "Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -4462,7 +4462,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-david-w-johnson",
-    "name": "David W. Johnson",
+    "name": "Dr. David W. Johnson",
     "title": "Associate Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -4505,7 +4505,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-lorelle-semley",
-    "name": "Lorelle Semley",
+    "name": "Dr. Lorelle Semley",
     "title": "Professor, Director of African and African Diaspora Studies",
     "department": "History",
     "departmentId": "history",
@@ -4548,7 +4548,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-franziska-seraphim",
-    "name": "Franziska Seraphim",
+    "name": "Dr. Franziska Seraphim",
     "title": "Associate Professor",
     "department": "History",
     "departmentId": "history",
@@ -4591,7 +4591,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-andrew-culbreth",
-    "name": "Andrew Culbreth",
+    "name": "Dr. Andrew Culbreth",
     "title": "Assistant Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -4634,7 +4634,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-joshua-snyder",
-    "name": "Joshua Snyder",
+    "name": "Dr. Joshua Snyder",
     "title": "Associate Professor of the Practice",
     "department": "Theology",
     "departmentId": "theology",
@@ -4677,7 +4677,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-jan-engelbrecht",
-    "name": "Jan Engelbrecht",
+    "name": "Dr. Jan Engelbrecht",
     "title": "Professor of Physics",
     "department": "Physics",
     "departmentId": "physics",
@@ -4726,7 +4726,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-robert-j-savage",
-    "name": "Robert J. Savage",
+    "name": "Dr. Robert J. Savage",
     "title": "Professor of the Practice",
     "department": "History",
     "departmentId": "history",
@@ -4769,7 +4769,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-mira-yun",
-    "name": "Mira Yun",
+    "name": "Dr. Mira Yun",
     "title": "Professor of the Practice",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -4812,7 +4812,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-pablo-guerron",
-    "name": "Pablo Guerron",
+    "name": "Dr. Pablo Guerron",
     "title": "Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -4861,7 +4861,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-rosen-valchev",
-    "name": "Rosen Valchev",
+    "name": "Dr. Rosen Valchev",
     "title": "Associate Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -4910,7 +4910,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-sarah-byers",
-    "name": "Sarah Byers",
+    "name": "Dr. Sarah Byers",
     "title": "Associate Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -4953,7 +4953,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-richard-kenneth-atkins",
-    "name": "Richard Kenneth Atkins",
+    "name": "Dr. Richard Kenneth Atkins",
     "title": "Professor; Assistant Chair",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -4996,7 +4996,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-robert-ulbricht",
-    "name": "Robert Ulbricht",
+    "name": "Dr. Robert Ulbricht",
     "title": "Associate Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -5045,7 +5045,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-jason-welle",
-    "name": "Jason Welle",
+    "name": "Dr. Jason Welle",
     "title": "Assistant Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -5088,7 +5088,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-matthew-rutledge",
-    "name": "Matthew Rutledge",
+    "name": "Dr. Matthew Rutledge",
     "title": "Professor of the Practice",
     "department": "Economics",
     "departmentId": "economics",
@@ -5137,7 +5137,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-david-broido",
-    "name": "David Broido",
+    "name": "Dr. David Broido",
     "title": "Professor of Physics",
     "department": "Physics",
     "departmentId": "physics",
@@ -5186,7 +5186,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-hope-bretscher",
-    "name": "Hope Bretscher",
+    "name": "Dr. Hope Bretscher",
     "title": "Assistant Professor of Physics",
     "department": "Physics",
     "departmentId": "physics",
@@ -5235,7 +5235,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-michael-hartney",
-    "name": "Michael Hartney",
+    "name": "Dr. Michael Hartney",
     "title": "Associate Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -5278,7 +5278,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-marina-bers",
-    "name": "Marina Bers",
+    "name": "Dr. Marina Bers",
     "title": "Augustus Long Professor of Education",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -5321,7 +5321,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-antonio-serrato-capuchina",
-    "name": "Antonio Serrato-Capuchina",
+    "name": "Dr. Antonio Serrato-Capuchina",
     "title": "Assistant Professor of the Practice",
     "department": "Biology",
     "departmentId": "biology",
@@ -5364,7 +5364,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "engineering-ali-salifu",
-    "name": "Ali Salifu",
+    "name": "Dr. Ali Salifu",
     "title": "Assistant Professor",
     "department": "Engineering",
     "departmentId": "engineering",
@@ -5407,7 +5407,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-robert-c-bartlett",
-    "name": "Robert C. Bartlett",
+    "name": "Dr. Robert C. Bartlett",
     "title": "Behrakis Professor in Hellenic Political Studies",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -5450,7 +5450,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-andrea-vicini",
-    "name": "Andrea Vicini, S.J.",
+    "name": "Dr. Andrea Vicini, S.J.",
     "title": "Department Chair",
     "department": "Theology",
     "departmentId": "theology",
@@ -5493,7 +5493,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-maria-de-los-angeles-picone",
-    "name": "María de los Ángeles Picone",
+    "name": "Dr. María de los Ángeles Picone",
     "title": "Associate Professor",
     "department": "History",
     "departmentId": "history",
@@ -5536,7 +5536,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-priya-lal",
-    "name": "Priya Lal",
+    "name": "Dr. Priya Lal",
     "title": "Associate Professor",
     "department": "History",
     "departmentId": "history",
@@ -5579,7 +5579,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-jason-geller",
-    "name": "Jason Geller",
+    "name": "Dr. Jason Geller",
     "title": "Director, Human Neuroscience Laboratory",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -5622,7 +5622,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-edson-severnini",
-    "name": "Edson Severnini",
+    "name": "Dr. Edson Severnini",
     "title": "Associate Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -5671,7 +5671,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-jeffrey-l-cooley",
-    "name": "Jeffrey L. Cooley",
+    "name": "Dr. Jeffrey L. Cooley",
     "title": "Associate Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -5714,7 +5714,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-matthew-vale",
-    "name": "Matthew Vale",
+    "name": "Dr. Matthew Vale",
     "title": "Assistant Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -5757,7 +5757,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-ziqiang-wang",
-    "name": "Ziqiang Wang",
+    "name": "Dr. Ziqiang Wang",
     "title": "Professor of Physics",
     "department": "Physics",
     "departmentId": "physics",
@@ -5806,7 +5806,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-r-shep-melnick",
-    "name": "R. Shep Melnick",
+    "name": "Dr. R. Shep Melnick",
     "title": "Thomas P. O'Neill, Jr., Professor of American Politics",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -5849,7 +5849,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-maira-samary",
-    "name": "Maira Samary",
+    "name": "Dr. Maira Samary",
     "title": "Professor of the Practice",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -5892,7 +5892,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-elisa-magri",
-    "name": "Elisa Magrì",
+    "name": "Dr. Elisa Magrì",
     "title": "Associate Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -5935,7 +5935,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-stacee-santos",
-    "name": "Stacee Santos",
+    "name": "Dr. Stacee Santos",
     "title": "Research Assistant Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -5978,7 +5978,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-charles-wiseman",
-    "name": "Charles Wiseman",
+    "name": "Dr. Charles Wiseman",
     "title": "Professor of the Practice",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -6021,7 +6021,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-ilya-volkovich",
-    "name": "Ilya Volkovich",
+    "name": "Dr. Ilya Volkovich",
     "title": "Assistant Professor",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -6072,7 +6072,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-virginia-reinburg",
-    "name": "Virginia Reinburg",
+    "name": "Dr. Virginia Reinburg",
     "title": "Professor",
     "department": "History",
     "departmentId": "history",
@@ -6115,7 +6115,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-marina-berzins-mccoy",
-    "name": "Marina Berzins McCoy",
+    "name": "Dr. Marina Berzins McCoy",
     "title": "Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -6158,7 +6158,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-gerald-m-easter",
-    "name": "Gerald M. Easter",
+    "name": "Dr. Gerald M. Easter",
     "title": "Professor, Department Chairperson",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -6201,7 +6201,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-david-burgess",
-    "name": "David Burgess",
+    "name": "Dr. David Burgess",
     "title": "Professor",
     "department": "Biology",
     "departmentId": "biology",
@@ -6244,7 +6244,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-jean-luc-solere",
-    "name": "Jean-Luc Solère",
+    "name": "Dr. Jean-Luc Solère",
     "title": "Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -6287,7 +6287,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "earth-ethan-baxter",
-    "name": "Ethan Baxter",
+    "name": "Dr. Ethan Baxter",
     "title": "Professor",
     "department": "Earth & Environmental Sciences",
     "departmentId": "earth",
@@ -6344,7 +6344,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-micah-lott",
-    "name": "Micah Lott",
+    "name": "Dr. Micah Lott",
     "title": "Associate Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -6387,7 +6387,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-zoe-hilbert",
-    "name": "Zoë Hilbert",
+    "name": "Dr. Zoë Hilbert",
     "title": "Assistant Professor",
     "department": "Biology",
     "departmentId": "biology",
@@ -6438,7 +6438,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-kristin-e-heyer",
-    "name": "Kristin E. Heyer",
+    "name": "Dr. Kristin E. Heyer",
     "title": "Professor; Joseph Chair in Theology",
     "department": "Theology",
     "departmentId": "theology",
@@ -6481,7 +6481,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-robin-fleming",
-    "name": "Robin Fleming",
+    "name": "Dr. Robin Fleming",
     "title": "Professor",
     "department": "History",
     "departmentId": "history",
@@ -6524,7 +6524,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-uzi-segal",
-    "name": "Uzi Segal",
+    "name": "Dr. Uzi Segal",
     "title": "Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -6573,7 +6573,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-thibaud-marcesse",
-    "name": "Thibaud Marcesse",
+    "name": "Dr. Thibaud Marcesse",
     "title": "Associate Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -6616,7 +6616,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "earth-hanqin-tian",
-    "name": "Hanqin Tian",
+    "name": "Dr. Hanqin Tian",
     "title": "Professor",
     "department": "Earth & Environmental Sciences",
     "departmentId": "earth",
@@ -6659,7 +6659,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-brooke-magnus",
-    "name": "Brooke Magnus",
+    "name": "Dr. Brooke Magnus",
     "title": "Associate Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -6702,7 +6702,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-xiao-chen",
-    "name": "Xiao Chen",
+    "name": "Dr. Xiao Chen",
     "title": "Associate Professor of Physics",
     "department": "Physics",
     "departmentId": "physics",
@@ -6759,7 +6759,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-gregg-sparkman",
-    "name": "Gregg Sparkman",
+    "name": "Dr. Gregg Sparkman",
     "title": "Assistant Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -6810,7 +6810,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-zachary-matus",
-    "name": "Zachary Matus",
+    "name": "Dr. Zachary Matus",
     "title": "Associate Professor",
     "department": "History",
     "departmentId": "history",
@@ -6853,7 +6853,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-david-vanderhooft",
-    "name": "David Vanderhooft",
+    "name": "Dr. David Vanderhooft",
     "title": "Associate Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -6896,7 +6896,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-stephen-pope",
-    "name": "Stephen Pope",
+    "name": "Dr. Stephen Pope",
     "title": "Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -6939,7 +6939,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-katherine-mcauliffe",
-    "name": "Katherine McAuliffe",
+    "name": "Dr. Katherine McAuliffe",
     "title": "Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -6982,7 +6982,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-cyril-p-opeil",
-    "name": "Cyril P. Opeil, S.J.",
+    "name": "Dr. Cyril P. Opeil, S.J.",
     "title": "Associate Professor of Physics",
     "department": "Physics",
     "departmentId": "physics",
@@ -7031,7 +7031,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-daniel-joslyn-siemiatkoski",
-    "name": "Daniel Joslyn-Siemiatkoski",
+    "name": "Dr. Daniel Joslyn-Siemiatkoski",
     "title": "Professor; Kraft Family Chair, Director, Center for Christian-Jewish Learning",
     "department": "Theology",
     "departmentId": "theology",
@@ -7074,7 +7074,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-juliet-schor",
-    "name": "Juliet Schor",
+    "name": "Dr. Juliet Schor",
     "title": "Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -7117,7 +7117,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "engineering-catherine-hoar",
-    "name": "Catherine Hoar",
+    "name": "Dr. Catherine Hoar",
     "title": "Assistant Professor",
     "department": "Engineering",
     "departmentId": "engineering",
@@ -7160,7 +7160,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-julian-bourg",
-    "name": "Julian Bourg",
+    "name": "Dr. Julian Bourg",
     "title": "Associate Professor",
     "department": "History",
     "departmentId": "history",
@@ -7203,7 +7203,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-ehri-ryu",
-    "name": "Ehri Ryu",
+    "name": "Dr. Ehri Ryu",
     "title": "Associate Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -7246,7 +7246,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-michael-grubb",
-    "name": "Michael Grubb",
+    "name": "Dr. Michael Grubb",
     "title": "Associate Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -7295,7 +7295,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-jonathan-kirshner",
-    "name": "Jonathan Kirshner",
+    "name": "Dr. Jonathan Kirshner",
     "title": "Vincent Q. and Mary Ann Giffuni Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -7338,7 +7338,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-gary-michael-gurtler",
-    "name": "Gary Michael Gurtler, S.J.",
+    "name": "Dr. Gary Michael Gurtler, S.J.",
     "title": "Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -7381,7 +7381,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-brian-k-smith",
-    "name": "Brian K. Smith",
+    "name": "Dr. Brian K. Smith",
     "title": "Honorable David S. Nelson Chair; Associate Dean for Research",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -7424,7 +7424,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-francisco-marmolejo-cossio",
-    "name": "Francisco Marmolejo Cossio",
+    "name": "Dr. Francisco Marmolejo Cossio",
     "title": "Assistant Professor",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -7467,7 +7467,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-stephanie-leone",
-    "name": "Stephanie Leone",
+    "name": "Dr. Stephanie Leone",
     "title": "Professor, Renaissance Art History",
     "department": "History",
     "departmentId": "history",
@@ -7510,7 +7510,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-christopher-f-baum",
-    "name": "Christopher F. Baum",
+    "name": "Dr. Christopher F. Baum",
     "title": "Professor of Economics and Social Work",
     "department": "Economics",
     "departmentId": "economics",
@@ -7559,7 +7559,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-ryan-patrick-hanley",
-    "name": "Ryan Patrick Hanley",
+    "name": "Dr. Ryan Patrick Hanley",
     "title": "J. Joseph Moakley Professor of Political Science",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -7602,7 +7602,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-philip-j-landrigan",
-    "name": "Philip J. Landrigan",
+    "name": "Dr. Philip J. Landrigan",
     "title": "Professor",
     "department": "Biology",
     "departmentId": "biology",
@@ -7645,7 +7645,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-james-whitney",
-    "name": "James Whitney",
+    "name": "Dr. James Whitney",
     "title": "Research Professor",
     "department": "Biology",
     "departmentId": "biology",
@@ -7688,7 +7688,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-kendra-eshleman",
-    "name": "Kendra Eshleman",
+    "name": "Dr. Kendra Eshleman",
     "title": "Associate Professor",
     "department": "History",
     "departmentId": "history",
@@ -7731,7 +7731,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-lukas-freund",
-    "name": "Lukas Freund",
+    "name": "Dr. Lukas Freund",
     "title": "Assistant Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -7780,7 +7780,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-roberto-de-la-noval",
-    "name": "Roberto De La Noval",
+    "name": "Dr. Roberto De La Noval",
     "title": "Assistant Professor of the Practice",
     "department": "Theology",
     "departmentId": "theology",
@@ -7823,7 +7823,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-brendan-carson",
-    "name": "Brendan Carson",
+    "name": "Dr. Brendan Carson",
     "title": "Assistant Professor of the Practice",
     "department": "Biology",
     "departmentId": "biology",
@@ -7866,7 +7866,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-devin-pendas",
-    "name": "Devin Pendas",
+    "name": "Dr. Devin Pendas",
     "title": "Professor, Professor of Law (by courtesy)",
     "department": "History",
     "departmentId": "history",
@@ -7909,7 +7909,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-aaron-stump",
-    "name": "Aaron Stump",
+    "name": "Dr. Aaron Stump",
     "title": "John R. and Pamela Egan Chair of Computer Science Professor",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -7952,7 +7952,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-mary-c-murphy",
-    "name": "Mary C. Murphy",
+    "name": "Dr. Mary C. Murphy",
     "title": "Professor, Director of the Irish Insitute",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -7995,7 +7995,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "earth-yi-ming",
-    "name": "Yi Ming",
+    "name": "Dr. Yi Ming",
     "title": "Professor",
     "department": "Earth & Environmental Sciences",
     "departmentId": "earth",
@@ -8038,7 +8038,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-fabio-schiantarelli",
-    "name": "Fabio Schiantarelli",
+    "name": "Dr. Fabio Schiantarelli",
     "title": "Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -8087,7 +8087,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-mycah-conner",
-    "name": "Mycah Conner",
+    "name": "Dr. Mycah Conner",
     "title": "Assistant Professor",
     "department": "History",
     "departmentId": "history",
@@ -8130,7 +8130,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-ali-kadivar",
-    "name": "Ali Kadivar",
+    "name": "Dr. Ali Kadivar",
     "title": "Associate Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -8173,7 +8173,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-sylvia-sellers-garcia",
-    "name": "Sylvia Sellers-García",
+    "name": "Dr. Sylvia Sellers-García",
     "title": "Professor, Director of the Lowell Humanities Series",
     "department": "History",
     "departmentId": "history",
@@ -8216,7 +8216,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "earth-tara-pisani-gareau",
-    "name": "Tara Pisani Gareau",
+    "name": "Dr. Tara Pisani Gareau",
     "title": "Professor of the Practice; Director, Environmental Studies Program",
     "department": "Earth & Environmental Sciences",
     "departmentId": "earth",
@@ -8259,7 +8259,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-michael-mcdannald",
-    "name": "Michael McDannald",
+    "name": "Dr. Michael McDannald",
     "title": "Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -8310,7 +8310,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-guy-beiner",
-    "name": "Guy Beiner",
+    "name": "Dr. Guy Beiner",
     "title": "Professor, Sullivan Chair in Irish Studies",
     "department": "History",
     "departmentId": "history",
@@ -8353,7 +8353,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-scott-slotnick",
-    "name": "Scott Slotnick",
+    "name": "Dr. Scott Slotnick",
     "title": "Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -8396,7 +8396,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-jacoby-adeshei-carter",
-    "name": "Jacoby Adeshei Carter",
+    "name": "Dr. Jacoby Adeshei Carter",
     "title": "Associate Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -8439,7 +8439,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-timothy-crawford",
-    "name": "Timothy Crawford",
+    "name": "Dr. Timothy Crawford",
     "title": "Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -8482,7 +8482,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-theodore-papageorgiou",
-    "name": "Theodore Papageorgiou",
+    "name": "Dr. Theodore Papageorgiou",
     "title": "Felter Family Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -8531,7 +8531,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-jingyuan-qian",
-    "name": "Jingyuan Qian",
+    "name": "Dr. Jingyuan Qian",
     "title": "Assistant Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -8574,7 +8574,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-megan-loumagne-ulishney",
-    "name": "Megan Loumagne Ulishney",
+    "name": "Dr. Megan Loumagne Ulishney",
     "title": "Assistant Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -8617,7 +8617,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-susanto-basu",
-    "name": "Susanto Basu",
+    "name": "Dr. Susanto Basu",
     "title": "Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -8666,7 +8666,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-kenneth-c-williams",
-    "name": "Kenneth C. Williams",
+    "name": "Dr. Kenneth C. Williams",
     "title": "Professor",
     "department": "Biology",
     "departmentId": "biology",
@@ -8709,7 +8709,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "engineering-amin-mohebbi",
-    "name": "Amin Mohebbi",
+    "name": "Dr. Amin Mohebbi",
     "title": "Professor of the Practice",
     "department": "Engineering",
     "departmentId": "engineering",
@@ -8752,7 +8752,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-james-e-anderson",
-    "name": "James E. Anderson",
+    "name": "Dr. James E. Anderson",
     "title": "William B. Neenan, S.J. Millennium Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -8801,7 +8801,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-jos-moons",
-    "name": "Jos Moons, S.J.",
+    "name": "Dr. Jos Moons, S.J.",
     "title": "Assistant Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -8844,7 +8844,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "engineering-emma-brace",
-    "name": "Emma Brace",
+    "name": "Dr. Emma Brace",
     "title": "Assistant Professor",
     "department": "Engineering",
     "departmentId": "engineering",
@@ -8901,7 +8901,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-joanna-venator",
-    "name": "Joanna Venator",
+    "name": "Dr. Joanna Venator",
     "title": "Wieler Family Sesquicentennial Assistant Professor in Economics",
     "department": "Economics",
     "departmentId": "economics",
@@ -8950,7 +8950,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-brian-robinette",
-    "name": "Brian Robinette",
+    "name": "Dr. Brian Robinette",
     "title": "Professor; Joseph Professor in Catholic Spirituality",
     "department": "Theology",
     "departmentId": "theology",
@@ -8993,7 +8993,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-brian-zhou",
-    "name": "Brian Zhou",
+    "name": "Dr. Brian Zhou",
     "title": "Associate Professor of Physics",
     "department": "Physics",
     "departmentId": "physics",
@@ -9050,7 +9050,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-jeffrey-dacosta",
-    "name": "Jeffrey DaCosta",
+    "name": "Dr. Jeffrey DaCosta",
     "title": "Associate Professor of the Practice",
     "department": "Biology",
     "departmentId": "biology",
@@ -9093,7 +9093,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-daniel-mckaughan",
-    "name": "Daniel McKaughan",
+    "name": "Dr. Daniel McKaughan",
     "title": "Associate Professor; Convener of the M.A. program",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -9136,7 +9136,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-mariana-laverde",
-    "name": "Mariana Laverde",
+    "name": "Dr. Mariana Laverde",
     "title": "Assistant Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -9185,7 +9185,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-david-hughes",
-    "name": "David Hughes",
+    "name": "Dr. David Hughes",
     "title": "Assistant Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -9234,7 +9234,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-krzysztof-kempa",
-    "name": "Krzysztof Kempa",
+    "name": "Dr. Krzysztof Kempa",
     "title": "Professor of Physics",
     "department": "Physics",
     "departmentId": "physics",
@@ -9283,7 +9283,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-usman-khan",
-    "name": "Usman Khan",
+    "name": "Dr. Usman Khan",
     "title": "Professor",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -9326,7 +9326,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-ying-ran",
-    "name": "Ying Ran",
+    "name": "Dr. Ying Ran",
     "title": "Associate Professor of Physics",
     "department": "Physics",
     "departmentId": "physics",
@@ -9375,7 +9375,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-sara-cordes",
-    "name": "Sara Cordes",
+    "name": "Dr. Sara Cordes",
     "title": "Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -9418,7 +9418,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-vanessa-parks-rumble",
-    "name": "Vanessa Parks Rumble",
+    "name": "Dr. Vanessa Parks Rumble",
     "title": "Associate Professor",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -9461,7 +9461,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-kurt-straif",
-    "name": "Kurt Straif",
+    "name": "Dr. Kurt Straif",
     "title": "Research Professor",
     "department": "Biology",
     "departmentId": "biology",
@@ -9504,7 +9504,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-marc-landy",
-    "name": "Marc Landy",
+    "name": "Dr. Marc Landy",
     "title": "Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -9547,7 +9547,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "engineering-ashley-herkins",
-    "name": "Ashley Herkins",
+    "name": "Dr. Ashley Herkins",
     "title": "Assistant Professor of the Practice",
     "department": "Engineering",
     "departmentId": "engineering",
@@ -9590,7 +9590,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-martin-summers",
-    "name": "Martin Summers",
+    "name": "Dr. Martin Summers",
     "title": "Professor",
     "department": "History",
     "departmentId": "history",
@@ -9633,7 +9633,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "earth-juliet-ryan-davis",
-    "name": "Juliet Ryan-Davis",
+    "name": "Dr. Juliet Ryan-Davis",
     "title": "Assistant Professor",
     "department": "Earth & Environmental Sciences",
     "departmentId": "earth",
@@ -9676,7 +9676,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-charles-derber",
-    "name": "Charles Derber",
+    "name": "Dr. Charles Derber",
     "title": "Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -9719,7 +9719,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-owen-stanwood",
-    "name": "Owen Stanwood",
+    "name": "Dr. Owen Stanwood",
     "title": "Professor, Chairperson of the Department",
     "department": "History",
     "departmentId": "history",
@@ -9762,7 +9762,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-dermot-moran",
-    "name": "Dermot Moran",
+    "name": "Dr. Dermot Moran",
     "title": "Professor; Joseph Chair in Catholic Philosophy",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -9805,7 +9805,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-jeffrey-bloechl",
-    "name": "Jeffrey Bloechl",
+    "name": "Dr. Jeffrey Bloechl",
     "title": "Albert J. Fitzgibbons Professor of Philosophy; Chair of the Department",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -9848,7 +9848,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-richard-l-sweeney",
-    "name": "Richard L. Sweeney",
+    "name": "Dr. Richard L. Sweeney",
     "title": "Associate Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -9897,7 +9897,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-shakeeb-khan",
-    "name": "Shakeeb Khan",
+    "name": "Dr. Shakeeb Khan",
     "title": "Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -9946,7 +9946,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-james-keenan",
-    "name": "James Keenan, S.J.",
+    "name": "Dr. James Keenan, S.J.",
     "title": "Vice Provost for Global Engagement",
     "department": "Theology",
     "departmentId": "theology",
@@ -9989,7 +9989,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-gustavo-morello-sj",
-    "name": "Gustavo Morello SJ",
+    "name": "Dr. Gustavo Morello SJ",
     "title": "Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -10032,7 +10032,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-joseph-quinn",
-    "name": "Joseph Quinn",
+    "name": "Dr. Joseph Quinn",
     "title": "Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -10081,7 +10081,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-wen-fan",
-    "name": "Wen Fan",
+    "name": "Dr. Wen Fan",
     "title": "Associate Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -10124,7 +10124,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-klemens-engelberg",
-    "name": "Klemens Engelberg",
+    "name": "Dr. Klemens Engelberg",
     "title": "Research Assistant Faculty",
     "department": "Biology",
     "departmentId": "biology",
@@ -10167,7 +10167,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-thomas-n-seyfried",
-    "name": "Thomas N. Seyfried",
+    "name": "Dr. Thomas N. Seyfried",
     "title": "Professor",
     "department": "Biology",
     "departmentId": "biology",
@@ -10210,7 +10210,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-prasannan-parthasarathi",
-    "name": "Prasannan Parthasarathi",
+    "name": "Dr. Prasannan Parthasarathi",
     "title": "Professor",
     "department": "History",
     "departmentId": "history",
@@ -10253,7 +10253,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-yajun-mo",
-    "name": "Yajun Mo",
+    "name": "Dr. Yajun Mo",
     "title": "Associate Professor",
     "department": "History",
     "departmentId": "history",
@@ -10296,7 +10296,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-stephen-j-pfohl",
-    "name": "Stephen J. Pfohl",
+    "name": "Dr. Stephen J. Pfohl",
     "title": "Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -10339,7 +10339,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-hsin-hao-su",
-    "name": "Hsin-Hao Su",
+    "name": "Dr. Hsin-Hao Su",
     "title": "Assistant Professor",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -10382,7 +10382,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-brian-gareau",
-    "name": "Brian Gareau",
+    "name": "Dr. Brian Gareau",
     "title": "Professor, Senior Associate Dean for Faculty Affairs",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -10425,7 +10425,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "biology-marc-jan-gubbels",
-    "name": "Marc-Jan Gubbels",
+    "name": "Dr. Marc-Jan Gubbels",
     "title": "Professor",
     "department": "Biology",
     "departmentId": "biology",
@@ -10476,7 +10476,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-david-g-hunter",
-    "name": "David G. Hunter",
+    "name": "Dr. David G. Hunter",
     "title": "Margaret O'Brien Flatley Chair of Catholic Theology",
     "department": "Theology",
     "departmentId": "theology",
@@ -10519,7 +10519,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-sara-moorman",
-    "name": "Sara Moorman",
+    "name": "Dr. Sara Moorman",
     "title": "Professor, Department Chairperson",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -10562,7 +10562,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-marsin-alshamary",
-    "name": "Marsin Alshamary",
+    "name": "Dr. Marsin Alshamary",
     "title": "Assistant Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -10605,7 +10605,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-lacee-satcher",
-    "name": "Lacee Satcher",
+    "name": "Dr. Lacee Satcher",
     "title": "Assistant Professor",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -10648,7 +10648,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-elizabeth-shlala",
-    "name": "Elizabeth Shlala",
+    "name": "Dr. Elizabeth Shlala",
     "title": "Associate Dean for the Core; Professor of the Practice",
     "department": "History",
     "departmentId": "history",
@@ -10691,7 +10691,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "earth-kat-wilson",
-    "name": "Kat Wilson",
+    "name": "Dr. Kat Wilson",
     "title": "Assistant Professor",
     "department": "Earth & Environmental Sciences",
     "departmentId": "earth",
@@ -10742,7 +10742,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "psychology-john-christianson",
-    "name": "John Christianson",
+    "name": "Dr. John Christianson",
     "title": "Professor",
     "department": "Psychology & Neuroscience",
     "departmentId": "psychology",
@@ -10785,7 +10785,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-hideo-konishi",
-    "name": "Hideo Konishi",
+    "name": "Dr. Hideo Konishi",
     "title": "Professor",
     "department": "Economics",
     "departmentId": "economics",
@@ -10834,7 +10834,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-boyd-taylor-coolman",
-    "name": "Boyd Taylor Coolman",
+    "name": "Dr. Boyd Taylor Coolman",
     "title": "Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -10877,7 +10877,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "engineering-justin-henriques",
-    "name": "Justin Henriques",
+    "name": "Dr. Justin Henriques",
     "title": "Associate Professor",
     "department": "Engineering",
     "departmentId": "engineering",
@@ -10920,7 +10920,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-lindsey-o-rourke",
-    "name": "Lindsey O'Rourke",
+    "name": "Dr. Lindsey O'Rourke",
     "title": "Associate Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -10963,7 +10963,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "history-oliver-p-rafferty",
-    "name": "Oliver P. Rafferty, S.J.",
+    "name": "Dr. Oliver P. Rafferty, S.J.",
     "title": "Professor of History",
     "department": "History",
     "departmentId": "history",
@@ -11006,7 +11006,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "chemistry-alexis-grimaud",
-    "name": "Alexis Grimaud",
+    "name": "Dr. Alexis Grimaud",
     "title": "Associate Professor",
     "department": "Chemistry",
     "departmentId": "chemistry",
@@ -11057,7 +11057,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "chemistry-amir-h-hoveyda",
-    "name": "Amir H. Hoveyda",
+    "name": "Dr. Amir H. Hoveyda",
     "title": "Professor of Chemistry; Patricia and Joseph T. '49 Vanderslice Millennium Chair",
     "department": "Chemistry",
     "departmentId": "chemistry",
@@ -11108,7 +11108,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "chemistry-jier-huang",
-    "name": "Jier Huang",
+    "name": "Dr. Jier Huang",
     "title": "Professor of Chemistry",
     "department": "Chemistry",
     "departmentId": "chemistry",
@@ -11159,7 +11159,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "chemistry-shih-yuan-liu",
-    "name": "Shih-Yuan Liu",
+    "name": "Dr. Shih-Yuan Liu",
     "title": "Professor of Chemistry",
     "department": "Chemistry",
     "departmentId": "chemistry",
@@ -11216,7 +11216,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "chemistry-udayan-mohanty",
-    "name": "Udayan Mohanty",
+    "name": "Dr. Udayan Mohanty",
     "title": "Professor of Chemistry",
     "department": "Chemistry",
     "departmentId": "chemistry",
@@ -11259,7 +11259,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "chemistry-james-p-morken",
-    "name": "James P. Morken",
+    "name": "Dr. James P. Morken",
     "title": "Professor of Chemistry; Louise and Jim Vanderslice and Family Chair",
     "department": "Chemistry",
     "departmentId": "chemistry",
@@ -11316,7 +11316,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "chemistry-matthias-waegele",
-    "name": "Matthias Waegele",
+    "name": "Dr. Matthias Waegele",
     "title": "Professor of Chemistry",
     "department": "Chemistry",
     "departmentId": "chemistry",
@@ -11367,7 +11367,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "chemistry-x-peter-zhang",
-    "name": "X. Peter Zhang",
+    "name": "Dr. X. Peter Zhang",
     "title": "Professor of Chemistry",
     "department": "Chemistry",
     "departmentId": "chemistry",
@@ -11418,7 +11418,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "chemistry-huiqing-jane-zhou",
-    "name": "Huiqing (Jane) Zhou",
+    "name": "Dr. Huiqing (Jane) Zhou",
     "title": "Assistant Professor of Chemistry",
     "department": "Chemistry",
     "departmentId": "chemistry",
@@ -11469,7 +11469,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-john-f-baldovin",
-    "name": "John F. Baldovin, S.J.",
+    "name": "Dr. John F. Baldovin, S.J.",
     "title": "Professor of Historical and Liturgical Theology",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11512,7 +11512,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-vicente-chong",
-    "name": "Vicente Chong, S.J.",
+    "name": "Dr. Vicente Chong, S.J.",
     "title": "Assistant Professor of Systematic Theology",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11555,7 +11555,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-daniel-j-daly",
-    "name": "Daniel J. Daly",
+    "name": "Dr. Daniel J. Daly",
     "title": "Associate Professor of Moral Theology",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11598,7 +11598,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-andrew-r-davis",
-    "name": "Andrew R. Davis",
+    "name": "Dr. Andrew R. Davis",
     "title": "Professor Ordinarius of Old Testament",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11641,7 +11641,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-brian-dunkle",
-    "name": "Brian Dunkle, S.J.",
+    "name": "Dr. Brian Dunkle, S.J.",
     "title": "Associate Professor of Historical Theology",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11684,7 +11684,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-barton-t-geger",
-    "name": "Barton T. Geger, S.J.",
+    "name": "Dr. Barton T. Geger, S.J.",
     "title": "Associate Professor of the Practice",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11727,7 +11727,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-franklin-t-harkins",
-    "name": "Franklin T. Harkins",
+    "name": "Dr. Franklin T. Harkins",
     "title": "Professor of Historical Theology",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11770,7 +11770,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-angela-kim-harkins",
-    "name": "Angela Kim Harkins",
+    "name": "Dr. Angela Kim Harkins",
     "title": "Professor of New Testament",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11813,7 +11813,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-mary-jo-iozzio",
-    "name": "Mary Jo Iozzio",
+    "name": "Dr. Mary Jo Iozzio",
     "title": "Professor of Moral Theology",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11856,7 +11856,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-richard-lennan",
-    "name": "Richard Lennan",
+    "name": "Dr. Richard Lennan",
     "title": "Professor of Systematic Theology",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11899,7 +11899,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-christina-mcrorie",
-    "name": "Christina McRorie",
+    "name": "Dr. Christina McRorie",
     "title": "Associate Professor of Moral Theology",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11942,7 +11942,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-stephen-j-molvarec",
-    "name": "Stephen J. Molvarec, S.J.",
+    "name": "Dr. Stephen J. Molvarec, S.J.",
     "title": "Assistant Professor of Church History",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -11985,7 +11985,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-catherine-m-mooney",
-    "name": "Catherine M. Mooney",
+    "name": "Dr. Catherine M. Mooney",
     "title": "Associate Professor of Church History",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -12028,7 +12028,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-timothy-w-o-brien",
-    "name": "Timothy W. O'Brien",
+    "name": "Dr. Timothy W. O'Brien",
     "title": "Assistant Professor of Church History",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -12071,7 +12071,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-theresa-a-o-keefe",
-    "name": "Theresa A. O'Keefe",
+    "name": "Dr. Theresa A. O'Keefe",
     "title": "Professor of the Practice, Religious Education",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -12114,7 +12114,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-hosffman-ospino",
-    "name": "Hosffman Ospino",
+    "name": "Dr. Hosffman Ospino",
     "title": "Professor of Hispanic Ministry and Religious Education",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -12157,7 +12157,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-o-ernesto-valiente",
-    "name": "O. Ernesto Valiente",
+    "name": "Dr. O. Ernesto Valiente",
     "title": "Associate Professor of Systematic Theology",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -12200,7 +12200,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-jaime-l-waters",
-    "name": "Jaime L. Waters",
+    "name": "Dr. Jaime L. Waters",
     "title": "Associate Professor of Old Testament",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -12243,7 +12243,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-soojung-ahn",
-    "name": "Soojung Ahn",
+    "name": "Dr. Soojung Ahn",
     "title": "Assistant Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12286,7 +12286,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-diana-bowser",
-    "name": "Diana Bowser",
+    "name": "Dr. Diana Bowser",
     "title": "Associate Dean for Research and Integrated Science",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12329,7 +12329,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-elizabeth-broden-arciprete",
-    "name": "Elizabeth Broden Arciprete",
+    "name": "Dr. Elizabeth Broden Arciprete",
     "title": "Assistant Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12372,7 +12372,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-ann-wolbert-burgess",
-    "name": "Ann Wolbert Burgess",
+    "name": "Dr. Ann Wolbert Burgess",
     "title": "Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12415,7 +12415,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-lindsey-camp",
-    "name": "Lindsey Camp",
+    "name": "Dr. Lindsey Camp",
     "title": "Assistant Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12458,7 +12458,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-eunji-cho",
-    "name": "Eunji Cho",
+    "name": "Dr. Eunji Cho",
     "title": "Assistant Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12501,7 +12501,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-megan-clancy",
-    "name": "Megan Clancy",
+    "name": "Dr. Megan Clancy",
     "title": "Assistant Professor of the Practice and Coordinator for Nurse Anesthesia Scholarly Projects",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12544,7 +12544,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-catherine-conahan",
-    "name": "Catherine Conahan",
+    "name": "Dr. Catherine Conahan",
     "title": "Assistant Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12587,7 +12587,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-carol-connolly",
-    "name": "Carol Connolly",
+    "name": "Dr. Carol Connolly",
     "title": "Associate Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12630,7 +12630,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-thamarah-crevecoeur",
-    "name": "Thamarah Crevecoeur",
+    "name": "Dr. Thamarah Crevecoeur",
     "title": "Associate Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12673,7 +12673,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-bethany-a-croke",
-    "name": "Bethany A. Croke",
+    "name": "Dr. Bethany A. Croke",
     "title": "Assistant Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12716,7 +12716,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-andrew-a-dwyer",
-    "name": "Andrew A. Dwyer",
+    "name": "Dr. Andrew A. Dwyer",
     "title": "Professor and the Twomey Family Faculty Fellow",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12759,7 +12759,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-susan-emery",
-    "name": "Susan Emery",
+    "name": "Dr. Susan Emery",
     "title": "Professor of the Practice and Director, Nurse Anesthesia Program",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12802,7 +12802,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-jane-m-flanagan",
-    "name": "Jane M. Flanagan",
+    "name": "Dr. Jane M. Flanagan",
     "title": "Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12845,7 +12845,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-susan-gennaro",
-    "name": "Susan Gennaro",
+    "name": "Dr. Susan Gennaro",
     "title": "Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12888,7 +12888,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-erin-george",
-    "name": "Erin George",
+    "name": "Dr. Erin George",
     "title": "Assistant Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12931,7 +12931,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-sarah-given",
-    "name": "Sarah Given",
+    "name": "Dr. Sarah Given",
     "title": "Assistant Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -12974,7 +12974,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-leah-gordon",
-    "name": "Leah Gordon",
+    "name": "Dr. Leah Gordon",
     "title": "Associate Dean for Strategic Initiatives",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13017,7 +13017,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-katherine-gregory",
-    "name": "Katherine Gregory",
+    "name": "Dr. Katherine Gregory",
     "title": "Dean",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13060,7 +13060,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-katharine-hutchinson",
-    "name": "Katharine Hutchinson",
+    "name": "Dr. Katharine Hutchinson",
     "title": "Program Director of Midwifery and Women's Health and Associate Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13103,7 +13103,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-wonkyung-jung",
-    "name": "Wonkyung Jung",
+    "name": "Dr. Wonkyung Jung",
     "title": "Assistant Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13146,7 +13146,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-anna-klarare",
-    "name": "Anna Klarare",
+    "name": "Dr. Anna Klarare",
     "title": "Associate Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13189,7 +13189,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-christopher-sean-lee",
-    "name": "Christopher Sean Lee",
+    "name": "Dr. Christopher Sean Lee",
     "title": "Barry Family/Goldman Sachs Endowed Professorship in Nursing",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13232,7 +13232,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-ashley-longacre",
-    "name": "Ashley Longacre",
+    "name": "Dr. Ashley Longacre",
     "title": "Assistant Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13275,7 +13275,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-karen-s-lyons",
-    "name": "Karen S. Lyons",
+    "name": "Dr. Karen S. Lyons",
     "title": "Professor and the Elizabeth Power Keohane Faculty Fellow",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13324,7 +13324,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-alison-marshall",
-    "name": "Alison Marshall",
+    "name": "Dr. Alison Marshall",
     "title": "Assistant Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13367,7 +13367,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-arlene-mcguane",
-    "name": "Arlene McGuane",
+    "name": "Dr. Arlene McGuane",
     "title": "Director of Clinical Learning and Simulation Centers and Associate Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13410,7 +13410,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-aimee-milliken",
-    "name": "Aimee Milliken",
+    "name": "Dr. Aimee Milliken",
     "title": "Deborah Joyce Norberg Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13453,7 +13453,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-tam-h-nguyen",
-    "name": "Tam H. Nguyen",
+    "name": "Dr. Tam H. Nguyen",
     "title": "Department Chairperson, Associate Professor, and Strakosch Family Faculty Fellow in Community Health",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13496,7 +13496,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-jinhee-park",
-    "name": "Jinhee Park",
+    "name": "Dr. Jinhee Park",
     "title": "Associate Professor and the Deborah Joyce Norberg Faculty Fellow",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13539,7 +13539,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-noelle-v-pavlovic",
-    "name": "Noelle V. Pavlovic",
+    "name": "Dr. Noelle V. Pavlovic",
     "title": "Assistant Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13582,7 +13582,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-victor-petreca",
-    "name": "Victor Petreca",
+    "name": "Dr. Victor Petreca",
     "title": "Assistant Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13625,7 +13625,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-melissa-perez-capotosto",
-    "name": "Melissa Pérez Capotosto",
+    "name": "Dr. Melissa Pérez Capotosto",
     "title": "Associate Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13668,7 +13668,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-katelyn-sileo",
-    "name": "Katelyn Sileo",
+    "name": "Dr. Katelyn Sileo",
     "title": "Associate Professor and the Laura Lee Mansfield Faculty Fellow",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13711,7 +13711,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-patricia-a-tabloski",
-    "name": "Patricia A. Tabloski",
+    "name": "Dr. Patricia A. Tabloski",
     "title": "Associate Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13754,7 +13754,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-patricia-underwood",
-    "name": "Patricia Underwood",
+    "name": "Dr. Patricia Underwood",
     "title": "Assistant Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13797,7 +13797,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-melissa-uveges",
-    "name": "Melissa Uveges",
+    "name": "Dr. Melissa Uveges",
     "title": "Assistant Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13840,7 +13840,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-caitlin-vitale",
-    "name": "Caitlin Vitale",
+    "name": "Dr. Caitlin Vitale",
     "title": "Assistant Professor of the Practice and Associate Program Director and Director of Clinical Education, Nurse Anesthesia Program",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13883,7 +13883,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-danielle-walker",
-    "name": "Danielle Walker",
+    "name": "Dr. Danielle Walker",
     "title": "Assistant Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13926,7 +13926,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-katherine-wentzell",
-    "name": "Katherine Wentzell",
+    "name": "Dr. Katherine Wentzell",
     "title": "Assistant Professor",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -13983,7 +13983,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-brittney-van-de-water",
-    "name": "Brittney van de Water",
+    "name": "Dr. Brittney van de Water",
     "title": "Associate Professor and the Deborah J. Norberg Family Faculty Fellow",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -14040,7 +14040,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-lillie-r-albert",
-    "name": "Lillie R. Albert",
+    "name": "Dr. Lillie R. Albert",
     "title": "Program Director, Secondary Education",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14083,7 +14083,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-g-michael-barnett",
-    "name": "G. Michael Barnett",
+    "name": "Dr. G. Michael Barnett",
     "title": "Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14126,7 +14126,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-faythe-beauchemin",
-    "name": "Faythe Beauchemin",
+    "name": "Dr. Faythe Beauchemin",
     "title": "Assistant Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14169,7 +14169,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-damian-bebell",
-    "name": "Damian Bebell",
+    "name": "Dr. Damian Bebell",
     "title": "Assistant Research Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14212,7 +14212,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-jessica-belue-buckley",
-    "name": "Jessica Belue Buckley",
+    "name": "Dr. Jessica Belue Buckley",
     "title": "Associate Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14255,7 +14255,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-gerardo-l-blanco",
-    "name": "Gerardo L. Blanco",
+    "name": "Dr. Gerardo L. Blanco",
     "title": "Academic Director, Center for International Higher Education",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14298,7 +14298,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-david-blustein",
-    "name": "David Blustein",
+    "name": "Dr. David Blustein",
     "title": "Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14341,7 +14341,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-angela-boatman",
-    "name": "Angela Boatman",
+    "name": "Dr. Angela Boatman",
     "title": "Associate Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14384,7 +14384,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-caitlyn-bolton",
-    "name": "Caitlyn Bolton",
+    "name": "Dr. Caitlyn Bolton",
     "title": "Assistant Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14427,7 +14427,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-kristen-bottema-beutel",
-    "name": "Kristen Bottema-Beutel",
+    "name": "Dr. Kristen Bottema-Beutel",
     "title": "Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14470,7 +14470,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-henry-braun",
-    "name": "Henry Braun",
+    "name": "Dr. Henry Braun",
     "title": "Boisi Professor of Education and Public Policy and Education Research",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14513,7 +14513,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-cristiano-casalini",
-    "name": "Cristiano Casalini",
+    "name": "Dr. Cristiano Casalini",
     "title": "Endowed Chair, Jesuit Pedagogy and Educational History",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14556,7 +14556,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-eliana-castro",
-    "name": "Eliana Castro",
+    "name": "Dr. Eliana Castro",
     "title": "Assistant Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14599,7 +14599,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-andres-castro-samayoa",
-    "name": "Andrés Castro Samayoa",
+    "name": "Dr. Andrés Castro Samayoa",
     "title": "Program Director, Higher Education, Ph.D.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14642,7 +14642,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-vincent-cho",
-    "name": "Vincent Cho",
+    "name": "Dr. Vincent Cho",
     "title": "Program Director, Educational Leadership (Ed.D.) / Professional School Administrator Program (PSAP)",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14685,7 +14685,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-emanuele-colombo",
-    "name": "Emanuele Colombo",
+    "name": "Dr. Emanuele Colombo",
     "title": "Program Director, Transformative Educational Studies, B.A.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14728,7 +14728,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-ido-davidesco",
-    "name": "Ido Davidesco",
+    "name": "Dr. Ido Davidesco",
     "title": "Assistant Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14779,7 +14779,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-eric-dearing",
-    "name": "Eric Dearing",
+    "name": "Dr. Eric Dearing",
     "title": "Executive Director; Mary E. Walsh Center for Thriving Children",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14822,7 +14822,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-shaun-m-dougherty",
-    "name": "Shaun M. Dougherty",
+    "name": "Dr. Shaun M. Dougherty",
     "title": "Professor of Education & Policy",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14865,7 +14865,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-earl-j-edwards",
-    "name": "Earl J. Edwards",
+    "name": "Dr. Earl J. Edwards",
     "title": "Assistant Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14908,7 +14908,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-stella-m-flores",
-    "name": "Stella M. Flores",
+    "name": "Dr. Stella M. Flores",
     "title": "John E. Cawthorne Millennium Chair",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14951,7 +14951,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-claire-foley",
-    "name": "Claire Foley",
+    "name": "Dr. Claire Foley",
     "title": "Affiliate Faculty Member",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -14994,7 +14994,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-emily-gates",
-    "name": "Emily Gates",
+    "name": "Dr. Emily Gates",
     "title": "Program Director, Research and Evaluation Methods, M.A.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15037,7 +15037,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-chris-r-glass",
-    "name": "Chris R. Glass",
+    "name": "Dr. Chris R. Glass",
     "title": "Program Director, Higher Education, Ed.D.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15080,7 +15080,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-eugenio-gonzalez",
-    "name": "Eugenio Gonzalez",
+    "name": "Dr. Eugenio Gonzalez",
     "title": "Senior Research Director, TIMSS and PIRLS International Study Center",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15123,7 +15123,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-david-goodman",
-    "name": "David Goodman",
+    "name": "Dr. David Goodman",
     "title": "Associate Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15166,7 +15166,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-lisa-goodman",
-    "name": "Lisa Goodman",
+    "name": "Dr. Lisa Goodman",
     "title": "Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15209,7 +15209,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-a-lin-goodwin",
-    "name": "A. Lin Goodwin",
+    "name": "Dr. A. Lin Goodwin",
     "title": "Program Director, Curriculum and Instruction, Ph.D.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15252,7 +15252,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-andy-hargreaves",
-    "name": "Andy Hargreaves",
+    "name": "Dr. Andy Hargreaves",
     "title": "Research Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15295,7 +15295,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-chris-higgins",
-    "name": "Chris Higgins",
+    "name": "Dr. Chris Higgins",
     "title": "Department Chair, Department of Formative Education",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15338,7 +15338,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-jessica-hinson-williams",
-    "name": "Jessica Hinson-Williams",
+    "name": "Dr. Jessica Hinson-Williams",
     "title": "Assistant Professor of the Practice",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15381,7 +15381,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-lauri-johnson",
-    "name": "Lauri Johnson",
+    "name": "Dr. Lauri Johnson",
     "title": "Associate Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15424,7 +15424,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-oh-myo-kim",
-    "name": "Oh Myo Kim",
+    "name": "Dr. Oh Myo Kim",
     "title": "Associate Professor of the Practice",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15467,7 +15467,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-deoksoon-kim",
-    "name": "Deoksoon Kim",
+    "name": "Dr. Deoksoon Kim",
     "title": "Professor, Director of Transformative Education Lab",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15510,7 +15510,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-betty-s-lai",
-    "name": "Betty S. Lai",
+    "name": "Dr. Betty S. Lai",
     "title": "Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15561,7 +15561,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-elida-v-laski",
-    "name": "Elida V. Laski",
+    "name": "Dr. Elida V. Laski",
     "title": "Program Director, Applied Psychology and Human Development, B.A.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15612,7 +15612,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-jacqueline-v-lerner",
-    "name": "Jacqueline V. Lerner",
+    "name": "Dr. Jacqueline V. Lerner",
     "title": "Buehler Faculty Fellow, Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15655,7 +15655,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-rebekah-levine-coley",
-    "name": "Rebekah Levine Coley",
+    "name": "Dr. Rebekah Levine Coley",
     "title": "Director, Center for Child and Family Policy",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15706,7 +15706,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-zhushan-mandy-li",
-    "name": "Zhushan \"Mandy\" Li",
+    "name": "Dr. Zhushan \"Mandy\" Li",
     "title": "Program Director, Applied Statistics and Psychometrics, M.S.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15749,7 +15749,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-belle-liang",
-    "name": "Belle Liang",
+    "name": "Dr. Belle Liang",
     "title": "Ascione Faculty Formation Fellow",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15800,7 +15800,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-rebecca-lowenhaupt",
-    "name": "Rebecca Lowenhaupt",
+    "name": "Dr. Rebecca Lowenhaupt",
     "title": "Associate Dean, Faculty and Academic Affairs",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15843,7 +15843,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-ana-m-martinez-aleman",
-    "name": "Ana M. Martínez-Alemán",
+    "name": "Dr. Ana M. Martínez-Alemán",
     "title": "Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15886,7 +15886,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-katherine-mcneill",
-    "name": "Katherine McNeill",
+    "name": "Dr. Katherine McNeill",
     "title": "Program Director, Curriculum and Instruction, M.Ed.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15929,7 +15929,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-david-miele",
-    "name": "David Miele",
+    "name": "Dr. David Miele",
     "title": "Associate Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -15980,7 +15980,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-andrew-miller",
-    "name": "Andrew Miller",
+    "name": "Dr. Andrew Miller",
     "title": "Associate Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16023,7 +16023,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-gilda-morelli",
-    "name": "Gilda Morelli",
+    "name": "Dr. Gilda Morelli",
     "title": "Department Chair, Counseling, Developmental, and Educational Psychology",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16066,7 +16066,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-raquel-muniz",
-    "name": "Raquel Muñiz",
+    "name": "Dr. Raquel Muñiz",
     "title": "Program Director, Curriculum & Instruction with Specialization in Educational Leadership & Policy, Ph.D.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16109,7 +16109,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-laura-o-dwyer",
-    "name": "Laura O'Dwyer",
+    "name": "Dr. Laura O'Dwyer",
     "title": "Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16152,7 +16152,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-gabe-avakian-orona",
-    "name": "Gabe Avakian Orona",
+    "name": "Dr. Gabe Avakian Orona",
     "title": "Assistant Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16195,7 +16195,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-paul-poteat",
-    "name": "Paul Poteat",
+    "name": "Dr. Paul Poteat",
     "title": "Program Director, Applied Developmental and Educational Psychology, Ph.D.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16238,7 +16238,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-c-patrick-proctor",
-    "name": "C. Patrick Proctor",
+    "name": "Dr. C. Patrick Proctor",
     "title": "Department Chair, Teaching, Curriculum and Society",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16281,7 +16281,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-heather-rowan-kenyon",
-    "name": "Heather Rowan-Kenyon",
+    "name": "Dr. Heather Rowan-Kenyon",
     "title": "Department Chair, Educational Leadership & Higher Education",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16324,7 +16324,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-michael-russell",
-    "name": "Michael Russell",
+    "name": "Dr. Michael Russell",
     "title": "Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16367,7 +16367,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-martin-scanlan",
-    "name": "Martin Scanlan",
+    "name": "Dr. Martin Scanlan",
     "title": "Program Director, Educational Leadership and Policy, M.Ed.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16410,7 +16410,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-david-scanlon",
-    "name": "David Scanlon",
+    "name": "Dr. David Scanlon",
     "title": "Program Director, Moderate Support Needs",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16453,7 +16453,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-rebecca-schendel",
-    "name": "Rebecca Schendel",
+    "name": "Dr. Rebecca Schendel",
     "title": "Managing Director of the Center for International Higher Education",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16496,7 +16496,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-dennis-lynn-shirley",
-    "name": "Dennis Lynn Shirley",
+    "name": "Dr. Dennis Lynn Shirley",
     "title": "Research Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16539,7 +16539,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-shalini-sivathasan",
-    "name": "Shalini Sivathasan",
+    "name": "Dr. Shalini Sivathasan",
     "title": "Assistant Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16582,7 +16582,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-carola-suarez-orozco",
-    "name": "Carola Suárez-Orozco",
+    "name": "Dr. Carola Suárez-Orozco",
     "title": "Senior Fellow",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16625,7 +16625,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-ankhi-thakurta",
-    "name": "Ankhi Thakurta",
+    "name": "Dr. Ankhi Thakurta",
     "title": "Assistant Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16668,7 +16668,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-maria-theodorakakis",
-    "name": "Maria Theodorakakis",
+    "name": "Dr. Maria Theodorakakis",
     "title": "Associate Program Director, School Counseling, M.A.",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16711,7 +16711,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-marina-vasilyeva",
-    "name": "Marina Vasilyeva",
+    "name": "Dr. Marina Vasilyeva",
     "title": "Associate Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16754,7 +16754,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-mary-walsh",
-    "name": "Mary Walsh",
+    "name": "Dr. Mary Walsh",
     "title": "Executive Director of City Connects and Senior Fellow of the Mary E. Walsh Center for Thriving Children",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16797,7 +16797,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-stanton-wortham",
-    "name": "Stanton Wortham",
+    "name": "Dr. Stanton Wortham",
     "title": "Inaugural Charles F. Donovan, S.J., Dean",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16840,7 +16840,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-charles-zuckerman",
-    "name": "Charles Zuckerman",
+    "name": "Dr. Charles Zuckerman",
     "title": "Assistant Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16883,7 +16883,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-matthias-von-davier",
-    "name": "Matthias von Davier",
+    "name": "Dr. Matthias von Davier",
     "title": "Monan Professor in Education",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -16926,7 +16926,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-jean-bartunek",
-    "name": "Jean Bartunek",
+    "name": "Dr. Jean Bartunek",
     "title": "Robert A. and Evelyn J. Ferris Professor",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -16969,7 +16969,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-christina-bradley",
-    "name": "Christina Bradley",
+    "name": "Dr. Christina Bradley",
     "title": "Assistant Professor",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17012,7 +17012,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-judith-clair",
-    "name": "Judith Clair",
+    "name": "Dr. Judith Clair",
     "title": "Professor and William S. McKiernan '78 Family Faculty Fellow",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17055,7 +17055,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-vanessa-conzon",
-    "name": "Vanessa Conzon",
+    "name": "Dr. Vanessa Conzon",
     "title": "Assistant Professor",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17098,7 +17098,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-robert-fichman",
-    "name": "Robert Fichman",
+    "name": "Dr. Robert Fichman",
     "title": "Professor",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17141,7 +17141,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-judith-gordon",
-    "name": "Judith Gordon",
+    "name": "Dr. Judith Gordon",
     "title": "Professor",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17184,7 +17184,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-raquel-kessinger",
-    "name": "Raquel Kessinger",
+    "name": "Dr. Raquel Kessinger",
     "title": "Assistant Professor",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17227,7 +17227,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-agnieszka-kierner",
-    "name": "Agnieszka Kierner",
+    "name": "Dr. Agnieszka Kierner",
     "title": "Associate Professor of the Practice",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17270,7 +17270,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-jamie-ladge",
-    "name": "Jamie Ladge",
+    "name": "Dr. Jamie Ladge",
     "title": "Professor, Chairperson, and Hillenbrand Family Faculty Fellow",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17313,7 +17313,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-pilar-opazo",
-    "name": "Pilar Opazo",
+    "name": "Dr. Pilar Opazo",
     "title": "Associate Professor of the Practice",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17356,7 +17356,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-michael-pratt",
-    "name": "Michael Pratt",
+    "name": "Dr. Michael Pratt",
     "title": "Professor and O'Connor Chair in the Carroll School of Management",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17399,7 +17399,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-benjamin-rogers",
-    "name": "Benjamin Rogers",
+    "name": "Dr. Benjamin Rogers",
     "title": "Assistant Professor",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17442,7 +17442,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-elizabeth-bess-rouse",
-    "name": "Elizabeth (Bess) Rouse",
+    "name": "Dr. Elizabeth (Bess) Rouse",
     "title": "Associate Professor and Hillenbrand Family Faculty Fellow",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17485,7 +17485,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-richard-spinello",
-    "name": "Richard Spinello",
+    "name": "Dr. Richard Spinello",
     "title": "Professor of the Practice and Assistant Chairperson",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17528,7 +17528,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-njoke-thomas",
-    "name": "Njoke Thomas",
+    "name": "Dr. Njoke Thomas",
     "title": "Assistant Professor",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17571,7 +17571,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-tieying-yu",
-    "name": "Tieying Yu",
+    "name": "Dr. Tieying Yu",
     "title": "Associate Professor",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17614,7 +17614,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "physics-alexander-auner",
-    "name": "Alexander Auner",
+    "name": "Dr. Alexander Auner",
     "title": "Assistant Professor of the Practice and Undergraduate Program Director",
     "department": "Physics",
     "departmentId": "physics",
@@ -17663,7 +17663,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-matthew-kruger",
-    "name": "Matthew Kruger",
+    "name": "Dr. Matthew Kruger",
     "title": "Associate Professor of the Practice; Director of Undergraduate Studies",
     "department": "Theology",
     "departmentId": "theology",
@@ -17706,7 +17706,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "engineering-jenna-tonn",
-    "name": "Jenna Tonn",
+    "name": "Dr. Jenna Tonn",
     "title": "Associate Professor of the Practice, Director of Undergraduate Studies",
     "department": "Engineering",
     "departmentId": "engineering",
@@ -17749,7 +17749,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "sociology-alyssa-goldman",
-    "name": "Alyssa Goldman",
+    "name": "Dr. Alyssa Goldman",
     "title": "Associate Professor, Director of Undergraduate Studies",
     "department": "Sociology",
     "departmentId": "sociology",
@@ -17792,7 +17792,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "philosophy-marius-stan",
-    "name": "Marius Stan",
+    "name": "Dr. Marius Stan",
     "title": "Associate Professor; Director of Undergraduate Studies",
     "department": "Philosophy",
     "departmentId": "philosophy",
@@ -17835,7 +17835,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-julia-devoy",
-    "name": "Julia DeVoy",
+    "name": "Dr. Julia DeVoy",
     "title": "Associate Dean of Undergraduate Programs and Students",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -17878,7 +17878,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "csom-mgmt-marta-geletkanycz",
-    "name": "Marta Geletkanycz",
+    "name": "Dr. Marta Geletkanycz",
     "title": "Associate Professor",
     "department": "Management & Organization",
     "departmentId": "csom-mgmt",
@@ -17923,7 +17923,7 @@ const BC_FACULTY_DATA = [
   // -- Added 2026-11-10 after manual review: publications listed on BC profiles but not indexed in OpenAlex --
   {
     "id": "polisci-peter-skerry",
-    "name": "Peter Skerry",
+    "name": "Dr. Peter Skerry",
     "title": "Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -17966,7 +17966,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-david-buckley",
-    "name": "David Buckley",
+    "name": "Dr. David Buckley",
     "title": "Professor, Director of the Boisi Center",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -18009,7 +18009,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "theology-ligita-ryliskyte",
-    "name": "Ligita Ryliškytė, SJE",
+    "name": "Dr. Ligita Ryliškytė, SJE",
     "title": "Assistant Professor",
     "department": "Theology",
     "departmentId": "theology",
@@ -18052,7 +18052,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "cs-amittai-aviram",
-    "name": "Amittai Aviram",
+    "name": "Dr. Amittai Aviram",
     "title": "Associate Professor of the Practice",
     "department": "Computer Science",
     "departmentId": "cs",
@@ -18095,7 +18095,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "polisci-hannes-kerber",
-    "name": "Hannes Kerber",
+    "name": "Dr. Hannes Kerber",
     "title": "Assistant Professor",
     "department": "Political Science",
     "departmentId": "polisci",
@@ -18138,7 +18138,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "economics-molly-moore",
-    "name": "Molly Moore",
+    "name": "Dr. Molly Moore",
     "title": "Assistant Professor of the Practice",
     "department": "Economics",
     "departmentId": "economics",
@@ -18187,7 +18187,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "chemistry-lucas-bao",
-    "name": "Lucas Bao",
+    "name": "Dr. Lucas Bao",
     "title": "Assistant Professor of Chemistry",
     "department": "Chemistry",
     "departmentId": "chemistry",
@@ -18230,7 +18230,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "stm-theology-dominika-kurek-chomycz",
-    "name": "Dominika Kurek-Chomycz",
+    "name": "Dr. Dominika Kurek-Chomycz",
     "title": "Associate Professor of New Testament",
     "department": "Theology & Ministry (STM)",
     "departmentId": "stm-theology",
@@ -18316,7 +18316,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "nursing-ceara-conley",
-    "name": "Ceara Conley",
+    "name": "Dr. Ceara Conley",
     "title": "Assistant Professor of the Practice",
     "department": "Nursing Science",
     "departmentId": "nursing",
@@ -18359,7 +18359,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-laura-e-captari",
-    "name": "Laura E. Captari",
+    "name": "Dr. Laura E. Captari",
     "title": "Assistant Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -18402,7 +18402,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-jim-mahalik",
-    "name": "Jim Mahalik",
+    "name": "Dr. Jim Mahalik",
     "title": "Professor",
     "department": "Education & Human Development",
     "departmentId": "education",
@@ -18445,7 +18445,7 @@ const BC_FACULTY_DATA = [
   },
   {
     "id": "education-sidney-trantham",
-    "name": "Sidney Trantham",
+    "name": "Dr. Sidney Trantham",
     "title": "Associate Professor of the Practice",
     "department": "Education & Human Development",
     "departmentId": "education",

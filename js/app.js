@@ -14,7 +14,7 @@ const AppState = {
   verifiedOnly: false,
   mentoredOnly: false,
   page: 1,
-  sortBy: "verified" // verified | name | orcidWorks
+  sortBy: "opportunity" // opportunity | name | orcidWorks
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -175,14 +175,14 @@ function resetAllFilters() {
   AppState.orcidFilter = "all";
   AppState.verifiedOnly = false;
   AppState.mentoredOnly = false;
-  AppState.sortBy = "verified";
+  AppState.sortBy = "opportunity";
 
   document.getElementById("searchInput").value = "";
   document.getElementById("statusFilterSelect").value = "all";
   document.getElementById("compFilterSelect").value = "all";
   const orcidSelect = document.getElementById("orcidFilterSelect");
   if (orcidSelect) orcidSelect.value = "all";
-  document.getElementById("sortSelect").value = "verified";
+  document.getElementById("sortSelect").value = "opportunity";
 
   // Reset quick pills
   document.querySelectorAll(".quick-filter-btn").forEach(btn => btn.classList.remove("active"));
@@ -503,14 +503,37 @@ function getFilteredFaculty() {
     return true;
   }).sort((a, b) => {
     if (AppState.sortBy === "name") {
-      return a.name.localeCompare(b.name);
+      return compareByLastName(a, b);
     } else if (AppState.sortBy === "orcidWorks") {
-      return (b.orcid?.totalWorks || 0) - (a.orcid?.totalWorks || 0);
+      return (b.orcid?.totalWorks || 0) - (a.orcid?.totalWorks || 0) || compareByLastName(a, b);
     } else {
-      // Default: verified recently first
-      return new Date(b.lastUpdated) - new Date(a.lastUpdated);
+      // Default: best opportunities first, then A-Z by last name within each group
+      return opportunityRank(a) - opportunityRank(b) || compareByLastName(a, b);
     }
   });
+}
+
+// 0 = posted openings, 1 = has taken undergrads, 2 = verified pay, 3 = lab says it's full right now, 4 = everyone else
+function opportunityRank(p) {
+  if (p.status === "recruiting") return 0;
+  if (p.status === "full") return 3;
+  if (p.undergradHistory && p.undergradHistory.hasMentored) return 1;
+  if (p.pay && p.pay.paid) return 2;
+  return 4;
+}
+
+// Sort key "Last, First": ignores "Dr." and suffixes like "S.J." / "Jr." / "III"
+function lastNameKey(p) {
+  if (!p._sortKey) {
+    const parts = String(p.name || "").replace(/^((dr|prof|professor|rev|fr)\.?\s+)+/i, "").replace(/,.*$/, "").trim().split(/\s+/);
+    while (parts.length > 1 && /^(jr\.?|sr\.?|ii|iii|iv|s\.?j\.?)$/i.test(parts[parts.length - 1])) parts.pop();
+    const last = parts.pop() || "";
+    p._sortKey = last + ", " + parts.join(" ");
+  }
+  return p._sortKey;
+}
+function compareByLastName(a, b) {
+  return lastNameKey(a).localeCompare(lastNameKey(b), "en", { sensitivity: "base" });
 }
 
 // Render Faculty Cards
