@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSchoolPills();
   renderDepartmentPills();
   updateStatisticsDashboard();
+  syncFilterControls();
   renderFacultyList();
   setupEventListeners();
   ApplicationTracker.init();
@@ -113,6 +114,7 @@ function setupEventListeners() {
   if (statusSelect) {
     statusSelect.addEventListener("change", (e) => {
       AppState.statusFilter = e.target.value;
+      syncFilterControls();
       renderFacultyList();
     });
   }
@@ -122,6 +124,7 @@ function setupEventListeners() {
   if (orcidSelect) {
     orcidSelect.addEventListener("change", (e) => {
       AppState.orcidFilter = e.target.value;
+      syncFilterControls();
       renderFacultyList();
     });
   }
@@ -131,6 +134,7 @@ function setupEventListeners() {
   if (compSelect) {
     compSelect.addEventListener("change", (e) => {
       AppState.compensationFilter = e.target.value;
+      syncFilterControls();
       renderFacultyList();
     });
   }
@@ -184,9 +188,7 @@ function resetAllFilters() {
   if (orcidSelect) orcidSelect.value = "all";
   document.getElementById("sortSelect").value = "opportunity";
 
-  // Reset quick pills
-  document.querySelectorAll(".quick-filter-btn").forEach(btn => btn.classList.remove("active"));
-  document.getElementById("qfAll")?.classList.add("active");
+  syncFilterControls();
 
   renderSchoolPills();
   renderDepartmentPills();
@@ -194,39 +196,49 @@ function resetAllFilters() {
   showToast("All filters reset", "info");
 }
 
-// Quick filter shortcuts
-function applyQuickFilter(type) {
-  // Quick filters are mutually exclusive: each one starts from a clean slate
-  // (school, department, and search are left as-is)
-  document.querySelectorAll(".quick-filter-btn").forEach(btn => btn.classList.remove("active"));
-  AppState.statusFilter = "all";
-  AppState.orcidFilter = "all";
-  AppState.compensationFilter = "all";
-  AppState.verifiedOnly = false;
-  AppState.mentoredOnly = false;
+// Quick filters: toggles that combine (e.g. ORCID Active + Paid Positions shows only professors who are both).
+// "Actively Recruiting" and "No Posted Openings" are opposites, so turning one on turns the other off.
+// forceOn: turn the filter on even if it's already on (used by links elsewhere on the page)
+const QUICK_FILTERS = {
+  orcidActive: { id: "qfOrcidActive", isOn: () => AppState.orcidFilter === "active",      set: on => { AppState.orcidFilter = on ? "active" : "all"; } },
+  recruiting:  { id: "qfRecruiting",  isOn: () => AppState.statusFilter === "recruiting", set: on => { AppState.statusFilter = on ? "recruiting" : "all"; } },
+  mentored:    { id: "qfMentored",    isOn: () => AppState.mentoredOnly,                  set: on => { AppState.mentoredOnly = on; } },
+  inquire:     { id: "qfInquire",     isOn: () => AppState.statusFilter === "inquire",    set: on => { AppState.statusFilter = on ? "inquire" : "all"; } },
+  paid:        { id: "qfPaid",        isOn: () => AppState.compensationFilter === "paid", set: on => { AppState.compensationFilter = on ? "paid" : "all"; } }
+};
 
-  if (type === "inquire") {
-    AppState.statusFilter = "inquire";
-  } else if (type === "recruiting") {
-    AppState.statusFilter = "recruiting";
-  } else if (type === "orcidActive") {
-    AppState.orcidFilter = "active";
-  } else if (type === "paid") {
-    AppState.compensationFilter = "paid";
-  } else if (type === "mentored") {
-    AppState.mentoredOnly = true;
+function applyQuickFilter(type, forceOn) {
+  if (type === "all") {
+    Object.values(QUICK_FILTERS).forEach(f => f.set(false));
+    AppState.verifiedOnly = false;
+  } else if (QUICK_FILTERS[type]) {
+    const f = QUICK_FILTERS[type];
+    f.set(forceOn ? true : !f.isOn());
   }
+  syncFilterControls();
+  renderFacultyList();
+}
 
-  const btnIds = { all: "qfAll", inquire: "qfInquire", recruiting: "qfRecruiting", orcidActive: "qfOrcidActive", paid: "qfPaid", mentored: "qfMentored" };
-  document.getElementById(btnIds[type] || "qfAll")?.classList.add("active");
+// Keep the quick-filter pills and the dropdowns showing exactly what is applied
+function syncFilterControls() {
+  let anyOn = false;
+  Object.values(QUICK_FILTERS).forEach(f => {
+    const on = f.isOn();
+    anyOn = anyOn || on;
+    const btn = document.getElementById(f.id);
+    if (btn) { btn.classList.toggle("active", on); btn.setAttribute("aria-pressed", String(on)); }
+  });
+  // "All Listings" is lit only when no status/ORCID/pay/undergrad filter is applied
+  const allOn = !anyOn && AppState.statusFilter === "all" && AppState.orcidFilter === "all" && AppState.compensationFilter === "all";
+  const allBtn = document.getElementById("qfAll");
+  if (allBtn) { allBtn.classList.toggle("active", allOn); allBtn.setAttribute("aria-pressed", String(allOn)); }
 
-  // keep the dropdowns in sync with what is actually applied
-  document.getElementById("statusFilterSelect").value = AppState.statusFilter;
+  const statusSelect = document.getElementById("statusFilterSelect");
+  if (statusSelect) statusSelect.value = AppState.statusFilter;
   const orcidSelect = document.getElementById("orcidFilterSelect");
   if (orcidSelect) orcidSelect.value = AppState.orcidFilter;
   const compSelect = document.getElementById("compFilterSelect");
   if (compSelect) compSelect.value = AppState.compensationFilter;
-  renderFacultyList();
 }
 
 
