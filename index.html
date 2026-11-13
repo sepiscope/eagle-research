@@ -26,8 +26,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   
   <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="css/styles.css?v=20261112d">
-  <link rel="stylesheet" href="css/components.css?v=20261112d">
+  <link rel="stylesheet" href="css/styles.css?v=20261112f">
+  <link rel="stylesheet" href="css/components.css?v=20261112f">
 </head>
 <body>
 
@@ -524,7 +524,9 @@
           <h3 class="h6 fw-bold">Professor information</h3>
           <p>Faculty details come from public Boston College pages, ORCID, and OpenAlex. Professor contact details are shown only to signed-in BC students.</p>
           <h3 class="h6 fw-bold">Deleting your account</h3>
-          <p class="mb-0">Remove any saved lab at any time from My Saved Labs. To delete your account and everything saved with it, sign in and choose <strong>Account → Delete account</strong>. It's permanent and immediate. Trouble? <a href="#" class="report-link" data-report="delete">Email us</a> from your BC address and we'll erase it.</p>
+          <p class="mb-0">Remove any saved lab at any time from My Saved Labs. To delete your account and everything saved with it, sign in and choose <strong>Account → Delete account</strong>. It's permanent and immediate. Trouble? <a href="#" class="report-link" data-report="delete">Contact us</a> and we'll erase it.</p>
+          <h3 class="h6 fw-bold mt-3">Problem reports</h3>
+          <p class="mb-0">Reports you send with <strong>Report a problem</strong> are delivered to our inbox by <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">Web3Forms</a>. They include what you write, the page you were on, and your email only if you add it.</p>
         </div>
       </div>
     </div>
@@ -847,6 +849,49 @@
     </div>
   </div>
 
+  <!-- Report a problem (sent to the site inbox via Web3Forms; see js/report.js) -->
+  <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-maroon text-white">
+          <h2 class="modal-title fs-5 fw-bold" id="reportModalTitle"><i class="bi bi-flag me-2"></i>Report a problem</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="modal-body p-4" id="reportForm" onsubmit="Report.submit(event)" novalidate>
+          <div class="alert alert-light border small py-2 d-none" id="reportAbout"></div>
+          <label for="reportType" class="form-label small fw-bold">What kind of problem?</label>
+          <select class="form-select form-select-sm mb-3" id="reportType">
+            <option value="Wrong or outdated professor info">Wrong or outdated professor info</option>
+            <option value="Broken link">Broken link</option>
+            <option value="Something on the site isn't working">Something on the site isn't working</option>
+            <option value="Sign-in or account">Sign-in or account</option>
+            <option value="Suggestion">Suggestion</option>
+            <option value="Other">Other</option>
+          </select>
+          <label for="reportMessage" class="form-label small fw-bold">What happened?</label>
+          <textarea class="form-control" id="reportMessage" rows="4" maxlength="2000" required aria-describedby="reportMessageHelp reportError"
+                    placeholder="e.g. This professor moved to another university, or the lab link goes to a 404 page."></textarea>
+          <div class="form-text" id="reportMessageHelp">Please don't include passwords or other private information.</div>
+          <label for="reportEmail" class="form-label small fw-bold mt-3">Your email <span class="fw-normal text-muted">(optional, if you'd like a reply)</span></label>
+          <input type="email" class="form-control form-control-sm" id="reportEmail" autocomplete="email" maxlength="200" placeholder="yourname@bc.edu">
+          <!-- spam trap: real people never see or fill this -->
+          <input type="checkbox" name="botcheck" id="reportBotcheck" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="small text-danger mt-2" id="reportError" role="alert"></div>
+          <div class="d-flex justify-content-end gap-2 mt-3">
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-maroon btn-sm" id="reportSubmit"><i class="bi bi-send me-1"></i>Send report</button>
+          </div>
+        </form>
+        <div class="modal-body p-4 text-center d-none" id="reportSent" role="status">
+          <div class="display-6 text-success mb-2"><i class="bi bi-check-circle"></i></div>
+          <p class="fw-semibold mb-1">Thanks! Your report was sent.</p>
+          <p class="small text-muted mb-3" id="reportSentNote">We'll look into it soon.</p>
+          <button type="button" class="btn btn-maroon btn-sm" data-bs-dismiss="modal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Delete account (permanent) -->
   <div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="deleteAccountModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -876,16 +921,17 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.min.js"></script>
-  <script src="js/config.js?v=20261112d"></script>
+  <script src="js/config.js?v=20261112f"></script>
 
   <!-- Application Scripts -->
-  <script src="js/data.js?v=20261112d"></script>
-  <script src="js/dept-notes.js?v=20261112d"></script>
-  <script src="js/contacts.js?v=20261112d"></script>
-  <script src="js/tracker.js?v=20261112d"></script>
-  <script src="js/auth.js?v=20261112d"></script>
-  <script src="js/email-generator.js?v=20261112d"></script>
-  <script src="js/audit-view.js?v=20261112d"></script>
-  <script src="js/app.js?v=20261112d"></script>
+  <script src="js/data.js?v=20261112f"></script>
+  <script src="js/dept-notes.js?v=20261112f"></script>
+  <script src="js/contacts.js?v=20261112f"></script>
+  <script src="js/tracker.js?v=20261112f"></script>
+  <script src="js/auth.js?v=20261112f"></script>
+  <script src="js/report.js?v=20261112f"></script>
+  <script src="js/email-generator.js?v=20261112f"></script>
+  <script src="js/audit-view.js?v=20261112f"></script>
+  <script src="js/app.js?v=20261112f"></script>
 </body>
 </html>

@@ -16,6 +16,10 @@ window.BC_RESEARCH_CONFIG = {
   supabaseUrl: "https://dnhtdnkogsnbambhlixk.supabase.co",
   supabaseAnonKey: "sb_publishable_W2yVfO_YhSuOUPtFAA005Q_8-BQ02Nb",   // publishable key (safe to publish)
   allowedEmailDomain: "bc.edu",
-  // Where "Report a problem" emails go (e.g. the site's Gmail). Leave blank to hide the report links.
-  contactEmail: "bceagleresearch@gmail.com"
+  // The site's inbox. Shown as a fallback if a report can't be sent.
+  contactEmail: "bceagleresearch@gmail.com",
+  // Web3Forms access key (web3forms.com): lets the "Report a problem" pop-up deliver
+  // reports to the inbox above. Safe to publish (it can only send email to that inbox).
+  // Blank = report links open the student's own email app instead.
+  reportFormKey: "e006cfdd-d244-4cd6-a8cf-c41804b4566e"
 };

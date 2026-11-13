@@ -83,9 +83,10 @@ function reportMailto(kind, prof) {
 }
 
 function setupReportLinks() {
+  const popup = typeof Report !== "undefined" && Report.enabled();   // pop-up form (js/report.js)
   document.querySelectorAll(".report-link").forEach(a => {
-    const href = reportMailto(a.dataset.report);
-    if (href) { a.href = href; a.classList.remove("d-none"); }
+    const href = popup ? "#" : reportMailto(a.dataset.report);
+    if (href) { a.href = href; a.classList.remove("d-none"); if (popup) a.setAttribute("role", "button"); }
     else if (a.dataset.report === "delete") { a.replaceWith(document.createTextNode("contact the site owner")); }
     else { a.classList.add("d-none"); }
   });
@@ -1053,9 +1054,11 @@ function viewProfessorDetail(facultyId) {
 
   const reportLink = document.getElementById("detailReportLink");
   if (reportLink) {
-    const href = reportMailto("listing", prof);
+    const popup = typeof Report !== "undefined" && Report.enabled();
+    const href = popup ? "#" : reportMailto("listing", prof);
     reportLink.classList.toggle("d-none", !href);
     if (href) reportLink.href = href;
+    reportLink.dataset.profId = prof.id;
   }
 
   // Projects: hidden entirely when none are posted (the research summary above covers it)
