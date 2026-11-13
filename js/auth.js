@@ -134,6 +134,45 @@ const Auth = {
     showToast("Signed out. Your saved labs stay in your account.", "info");
   },
 
+  openDeleteAccount() {
+    if (!this.client || !this.user) return;
+    document.getElementById("deleteAccountEmail").textContent = this.user.email || "";
+    document.getElementById("deleteAccountCount").textContent = (ApplicationTracker.data || []).length;
+    document.getElementById("deleteAccountConfirm").value = "";
+    document.getElementById("deleteAccountError").textContent = "";
+    document.getElementById("deleteAccountSubmit").disabled = false;
+    bootstrap.Modal.getOrCreateInstance(document.getElementById("deleteAccountModal")).show();
+    setTimeout(() => document.getElementById("deleteAccountConfirm")?.focus(), 300);
+  },
+
+  // Permanently deletes the signed-in student's account and saved labs (database function delete_my_account)
+  async deleteAccount(event) {
+    event.preventDefault();
+    const input = document.getElementById("deleteAccountConfirm");
+    const errEl = document.getElementById("deleteAccountError");
+    const btn = document.getElementById("deleteAccountSubmit");
+    errEl.textContent = "";
+    if (input.value.trim().toUpperCase() !== "DELETE") {
+      errEl.textContent = "Type DELETE to confirm.";
+      input.focus();
+      return;
+    }
+    if (!this.client || !this.user) { errEl.textContent = "You're not signed in."; return; }
+    btn.disabled = true;
+    const { error } = await this.client.rpc("delete_my_account");
+    if (error) {
+      console.error(error);
+      btn.disabled = false;
+      errEl.textContent = "Couldn't delete your account. Please try again, or use Report a problem in the footer.";
+      return;
+    }
+    bootstrap.Modal.getInstance(document.getElementById("deleteAccountModal"))?.hide();
+    // The account no longer exists on the server; just clear this browser's sign-in
+    try { await this.client.auth.signOut({ scope: "local" }); } catch (e) { console.error(e); }
+    document.querySelectorAll(".modal.show").forEach(m => bootstrap.Modal.getInstance(m)?.hide());
+    showToast("Your account and saved labs were permanently deleted.", "info");
+  },
+
   renderNav() {
     const slot = document.getElementById("accountNavSlot");
     if (!slot) return;
@@ -153,6 +192,8 @@ const Auth = {
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="#saved"><i class="bi bi-bookmark-star me-2"></i>My Saved Labs</a></li>
           <li><button class="dropdown-item" type="button" onclick="Auth.signOut()"><i class="bi bi-box-arrow-right me-2"></i>Sign out</button></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><button class="dropdown-item text-danger small" type="button" onclick="Auth.openDeleteAccount()"><i class="bi bi-trash me-2"></i>Delete account…</button></li>
         </ul>
       </div>`;
   }
