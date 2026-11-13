@@ -84,7 +84,7 @@ const Report = {
       if (!res.ok || !data.success) throw new Error(data.message || `HTTP ${res.status}`);
       this.lastSentAt = Date.now();
       document.getElementById("reportSentNote").textContent = email
-        ? `We'll reply to ${email} if we need more details.`
+        ? `We'll reply to ${email} if we need more details. Our reply comes from bceagleresearch@gmail.com, so check Junk/Spam too.`
         : "We'll look into it soon.";
       document.getElementById("reportForm").classList.add("d-none");
       document.getElementById("reportSent").classList.remove("d-none");

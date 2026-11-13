@@ -26,8 +26,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   
   <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="css/styles.css?v=20261112f">
-  <link rel="stylesheet" href="css/components.css?v=20261112f">
+  <link rel="stylesheet" href="css/styles.css?v=20261112g">
+  <link rel="stylesheet" href="css/components.css?v=20261112g">
 </head>
 <body>
 
@@ -825,7 +825,7 @@
         </div>
         <div class="modal-body p-4">
           <form id="signInForm" onsubmit="Auth.sendLink(event)" novalidate>
-            <p class="small text-muted"><span id="signInReason" class="fw-semibold text-dark"></span>Signing in with your BC email unlocks professor contact details and links, applying, and your saved-labs tracker. No password needed: we'll email you a one-time sign-in link.</p>
+            <p class="small text-muted"><span id="signInReason" class="fw-semibold text-dark"></span>Signing in with your BC email unlocks professor contact details and links, applying, and your saved-labs tracker. No password needed: we'll email you a one-time sign-in link and code (check Junk/Spam if you don't see it).</p>
             <label for="signInEmail" class="form-label small fw-bold">Boston College email</label>
             <input type="email" class="form-control" id="signInEmail" placeholder="yourname@bc.edu" autocomplete="email" required aria-describedby="signInError">
             <div class="small text-danger mt-2" id="signInError" role="alert"></div>
@@ -834,7 +834,11 @@
           </form>
           <div id="signInSent" class="d-none text-center" role="status">
             <div class="display-6 text-success mb-2"><i class="bi bi-envelope-check"></i></div>
-            <p class="mb-1">Check your inbox at <strong id="signInSentTo"></strong>.</p>
+            <p class="mb-2">Check your inbox at <strong id="signInSentTo"></strong>.</p>
+            <div class="alert alert-warning small text-start py-2 px-3 mb-3">
+              <i class="bi bi-exclamation-triangle-fill me-1"></i><strong>Not there? Check your Junk or Spam folder.</strong>
+              Sign-in emails from <strong>bceagleresearch@gmail.com</strong> often land there. In Outlook, also check <em>Other</em> and <em>Junk Email</em>. It can take a minute to arrive.
+            </div>
             <p class="small text-muted">Opening the email on a different device (like your phone)? Type the code from the email here instead of clicking the link. The link only signs in the device you open it on.</p>
             <form id="signInCodeForm" onsubmit="Auth.verifyCode(event)" novalidate class="text-start">
               <label for="signInCode" class="form-label small fw-bold">Code from the email</label>
@@ -842,7 +846,7 @@
               <div class="small text-danger mt-2" id="signInCodeError" role="alert"></div>
               <button type="submit" class="btn btn-maroon w-100 mt-2" id="signInCodeSubmit"><i class="bi bi-box-arrow-in-right me-1"></i>Sign in with code</button>
             </form>
-            <p class="small text-muted mt-3 mb-0">It may take a minute to arrive. <strong>Check your Junk/Spam folder</strong>: it often lands there. <button type="button" class="btn btn-link btn-sm p-0 align-baseline" onclick="Auth.openSignIn()">Use a different email</button></p>
+            <p class="small text-muted mt-3 mb-0">Wrong address? <button type="button" class="btn btn-link btn-sm p-0 align-baseline" onclick="Auth.openSignIn()">Use a different email</button></p>
           </div>
         </div>
       </div>
@@ -921,17 +925,17 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.min.js"></script>
-  <script src="js/config.js?v=20261112f"></script>
+  <script src="js/config.js?v=20261112g"></script>
 
   <!-- Application Scripts -->
-  <script src="js/data.js?v=20261112f"></script>
-  <script src="js/dept-notes.js?v=20261112f"></script>
-  <script src="js/contacts.js?v=20261112f"></script>
-  <script src="js/tracker.js?v=20261112f"></script>
-  <script src="js/auth.js?v=20261112f"></script>
-  <script src="js/report.js?v=20261112f"></script>
-  <script src="js/email-generator.js?v=20261112f"></script>
-  <script src="js/audit-view.js?v=20261112f"></script>
-  <script src="js/app.js?v=20261112f"></script>
+  <script src="js/data.js?v=20261112g"></script>
+  <script src="js/dept-notes.js?v=20261112g"></script>
+  <script src="js/contacts.js?v=20261112g"></script>
+  <script src="js/tracker.js?v=20261112g"></script>
+  <script src="js/auth.js?v=20261112g"></script>
+  <script src="js/report.js?v=20261112g"></script>
+  <script src="js/email-generator.js?v=20261112g"></script>
+  <script src="js/audit-view.js?v=20261112g"></script>
+  <script src="js/app.js?v=20261112g"></script>
 </body>
 </html>
