@@ -15,5 +15,7 @@
 window.BC_RESEARCH_CONFIG = {
   supabaseUrl: "https://dnhtdnkogsnbambhlixk.supabase.co",
   supabaseAnonKey: "sb_publishable_W2yVfO_YhSuOUPtFAA005Q_8-BQ02Nb",   // publishable key (safe to publish)
-  allowedEmailDomain: "bc.edu"
+  allowedEmailDomain: "bc.edu",
+  // Where "Report a problem" emails go (e.g. the site's Gmail). Leave blank to hide the report links.
+  contactEmail: "bceagleresearch@gmail.com"
 };

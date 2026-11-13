@@ -17,13 +17,99 @@ const AppState = {
   sortBy: "opportunity" // opportunity | name | orcidWorks
 };
 
+// ---- Shareable search links ---------------------------------------------------
+// The current search/filters live in the address (e.g. ?school=mcas-sci&dept=biology&pay=paid),
+// so copying the link shares exactly these results. Only known values are accepted.
+const URL_KEYS = { school: "selectedSchool", dept: "selectedDept", q: "searchQuery", status: "statusFilter", orcid: "orcidFilter", pay: "compensationFilter", sort: "sortBy" };
+const URL_ALLOWED = {
+  status: ["recruiting", "inquire", "full"], orcid: ["active", "inactive"], pay: ["paid"], sort: ["opportunity", "name", "orcidWorks"]
+};
+
+function readStateFromUrl() {
+  const params = new URLSearchParams(location.search);
+  const school = params.get("school");
+  if (school && BC_SCHOOLS.some(s => s.id === school)) AppState.selectedSchool = school;
+  const dept = params.get("dept");
+  const deptObj = dept && BC_DEPARTMENTS.find(d => d.id === dept && d.id !== "all");
+  if (deptObj) { AppState.selectedDept = deptObj.id; AppState.selectedSchool = deptObj.schoolId; }
+  const q = params.get("q");
+  if (q) AppState.searchQuery = q.toLowerCase().trim().slice(0, 100);
+  ["status", "orcid", "pay", "sort"].forEach(k => {
+    const v = params.get(k);
+    if (v && URL_ALLOWED[k].includes(v)) AppState[URL_KEYS[k]] = v;
+  });
+  if (params.get("undergrads") === "1") AppState.mentoredOnly = true;
+  const page = parseInt(params.get("page"), 10);
+  if (page > 1) AppState.page = page;
+  const input = document.getElementById("searchInput");
+  if (input && AppState.searchQuery) input.value = AppState.searchQuery;
+  const sortSel = document.getElementById("sortSelect");
+  if (sortSel) sortSel.value = AppState.sortBy;
+}
+
+function writeStateToUrl() {
+  const params = new URLSearchParams();
+  if (AppState.selectedSchool !== "all") params.set("school", AppState.selectedSchool);
+  if (AppState.selectedDept !== "all") params.set("dept", AppState.selectedDept);
+  if (AppState.searchQuery) params.set("q", AppState.searchQuery);
+  if (AppState.statusFilter !== "all") params.set("status", AppState.statusFilter);
+  if (AppState.orcidFilter !== "all") params.set("orcid", AppState.orcidFilter);
+  if (AppState.compensationFilter !== "all") params.set("pay", AppState.compensationFilter);
+  if (AppState.mentoredOnly) params.set("undergrads", "1");
+  if (AppState.sortBy !== "opportunity") params.set("sort", AppState.sortBy);
+  if (AppState.page > 1) params.set("page", String(AppState.page));
+  const qs = params.toString();
+  const url = location.pathname + (qs ? "?" + qs : "") + location.hash;
+  if (url !== location.pathname + location.search + location.hash) history.replaceState(history.state, "", url);
+}
+
+// ---- "Report a problem" links (mailto to config.contactEmail; hidden if none is set) ----
+function reportMailto(kind, prof) {
+  const to = ((window.BC_RESEARCH_CONFIG || {}).contactEmail || "").trim();
+  if (!to) return "";
+  const page = location.origin + location.pathname;
+  let subject, body;
+  if (kind === "listing" && prof) {
+    subject = `EagleResearch: problem with ${prof.name}'s listing`;
+    body = `Listing: ${prof.name} (${prof.department})\nListing ID: ${prof.id}\n\nWhat's wrong or out of date?\n\n`;
+  } else if (kind === "delete") {
+    subject = "EagleResearch: please delete my account";
+    body = "Please delete my EagleResearch account and saved labs. (Send this from the @bc.edu address you sign in with.)\n";
+  } else {
+    subject = "EagleResearch: problem report";
+    body = `Page: ${page}\n\nWhat happened? (What did you click, and what did you expect?)\n\nDevice/browser:\n`;
+  }
+  return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function setupReportLinks() {
+  document.querySelectorAll(".report-link").forEach(a => {
+    const href = reportMailto(a.dataset.report);
+    if (href) { a.href = href; a.classList.remove("d-none"); }
+    else if (a.dataset.report === "delete") { a.replaceWith(document.createTextNode("contact the site owner")); }
+    else { a.classList.add("d-none"); }
+  });
+}
+
+function shareResultsLink() {
+  const url = location.origin + location.pathname + location.search;
+  const done = () => showToast("Link copied. Anyone who opens it sees these same results.", "success");
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(url).then(done, () => window.prompt("Copy this link:", url));
+  } else {
+    window.prompt("Copy this link:", url);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  readStateFromUrl();
   renderSchoolPills();
   renderDepartmentPills();
   updateStatisticsDashboard();
   syncFilterControls();
-  renderFacultyList();
+  renderFacultyList(true);   // keep the page number from a shared link
   setupEventListeners();
+  setupReportLinks();
   ApplicationTracker.init();
   Auth.init();
   setupNavHighlight();
@@ -603,6 +689,7 @@ function renderFacultyList(keepPage) {
       (filtered.length > PAGE_SIZE ? ` · showing ${first + 1}–${first + pageItems.length}` : "");
   }
   renderPagination(filtered.length);
+  writeStateToUrl();
 
   if (filtered.length === 0) {
     container.innerHTML = "";
@@ -963,6 +1050,13 @@ function viewProfessorDetail(facultyId) {
   }
 
   document.getElementById("detailResearchSummary").textContent = prof.researchSummary;
+
+  const reportLink = document.getElementById("detailReportLink");
+  if (reportLink) {
+    const href = reportMailto("listing", prof);
+    reportLink.classList.toggle("d-none", !href);
+    if (href) reportLink.href = href;
+  }
 
   // Projects: hidden entirely when none are posted (the research summary above covers it)
   const projects = prof.currentProjects || [];
